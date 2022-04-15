@@ -2,12 +2,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { getDefaultNormalizer } from "@testing-library/react";
 
 
 
-const Main = ({ mailto, label }) => {
+const Main = () => {
  
+  
+
   const git = () =>    window.open("http://github.com/reverie64");
+  const mail = () => window.open('mailto: kristinh889@gmail.com');
   const linkedin = () => window.open("http://linkedin.com/in/kristinharris64");
 
     return (
@@ -18,9 +22,9 @@ const Main = ({ mailto, label }) => {
         <p>and I'm a frontend developer. <br />
          Full site coming soon. <br /> <br />
          For now, <br /><br />
-         visit my  <FontAwesomeIcon icon={faGithub} onClick={git} alt='github' className="link" />
-          <br /> 
-          send me an <FontAwesomeIcon icon={faEnvelope} alt='email' className="link" />
+         visit my <FontAwesomeIcon icon={faGithub} onClick={git} alt='github' className="link" /> 
+        { /* <br /> 
+          send me an <FontAwesomeIcon icon={faEnvelope} onClick={mail} alt='email' className="link" /> */}
           <br /> 
           or find me on <FontAwesomeIcon icon={faLinkedin} onClick={linkedin} alt='linkedin' className="link" />
          </p>
