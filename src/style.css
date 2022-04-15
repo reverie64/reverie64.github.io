@@ -1,21 +1,25 @@
 * {
     margin: 0;
     font-family: "Recursive", monospace;
-    text-align: left;
-    font-size: 1.25rem;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #b4d0f4;
+    background-color: #d9d4e7;
+    color: #0e172c;
+    text-align: left;
+    font-size: 1.25rem;
 }
 
 main {
-    padding-top: 10vh;
-    padding-left: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10vh;
     margin-left: auto;
     margin-right: auto;
-    background-color: #eeebe7;
+    background-color: #f9f8fc;
     box-shadow: 4px 5px 0px 0px #383838;
     border: 2px solid #383838;
     border-radius: 30px;
@@ -32,10 +36,10 @@ nav {
 }
 
 .link:hover {
-    color: #f4b4c2;
-    text-shadow: 0 0 15px #f4b4c2;
+    color: #fec7d7;
+    text-shadow: 0 0 15px #fec7d7;
     transition: all 0.5s ease;
     transform: scale(1.5);
     background-color: #383838;
-    border-radius: 30px;
+    border-radius: 30px 30px;
 }
