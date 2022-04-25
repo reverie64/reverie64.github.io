@@ -1,17 +1,20 @@
+const Navbar = () => {
+    return (
+        <nav>
+        <div className="wrapper">
+            <input
+                type="checkbox"
+                id="toggle"
+                className="toggle--checkbox"
+                name="toggle"
+            />
+            <label htmlFor="toggle" className="toggle--label">
+                <span className="toggle--label-background"></span>
+            </label>
+            <div className="background"></div>
+            </div>
+        </nav>
+    );
+};
 
-
-const Navbar = () => { 
-
-    return(
-    <nav>
-
-
-    </nav>
-    
-  
-    )
-
-
-}
-
-export default Navbar
+export default Navbar;

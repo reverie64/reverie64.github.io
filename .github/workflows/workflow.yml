@@ -1,18 +1,20 @@
+---
 name: Build and Deploy
-on: [push]
+on: 
+  push:
+    branches: [ main ]
+
 jobs:
   build-and-deploy:
-    concurrency: ci-${{ github.ref }}
+    name: Build and Deploy
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Build
+      - name: Install and Build
         run: npm install
-
-      - name: Test
-        run: npm run test
 
       - name: Deploy
         run: |

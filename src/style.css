@@ -11,6 +11,19 @@ body {
     font-size: 1.25rem;
 }
 
+nav {
+    height: 5em;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper {
+   height: 50px;
+  font-size: 20px;
+    margin-left: auto;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -27,9 +40,7 @@ main {
     height: 25em;
 }
 
-nav {
-    height: 5em;
-}
+
 
 .link {
     cursor: pointer;
@@ -43,3 +54,9 @@ nav {
     background-color: #383838;
     border-radius: 30px 30px;
 }
+
+
+/* toggle */
+.toggle--checkbox {
+    display: none;
+  }
