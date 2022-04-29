@@ -9,13 +9,30 @@ body {
     color: #0e172c;
     text-align: left;
     font-size: 1.25rem;
+   
 }
 
 nav {
-    height: 5em;
-    width: auto;
+    min-height: 10vh;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+background-color: #fec7d7;
+box-shadow: 4px 5px 0px 0px #383838;
+    border: 2px solid #383838;
+    border-radius: 30px;
+    width: auto;
+
+}
+.nav-links {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+
+    border-right: 2px solid #383838;
+    border-left: 2px solid #383838;
+
 }
 
 .wrapper {
@@ -23,21 +40,24 @@ nav {
   font-size: 20px;
     margin-left: auto;
 }
-
+h1, h2 {
+    text-shadow: 4px 4px 0 #fff;
+}
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 10vh;
+    padding-left: 5vh;
     margin-left: auto;
     margin-right: auto;
     background-color: #f9f8fc;
     box-shadow: 4px 5px 0px 0px #383838;
     border: 2px solid #383838;
     border-radius: 30px;
-    width: 25em;
-    height: 25em;
+    width: 55vh;
+    height: 60vh;
+   
 }
 
 
