@@ -1,3 +1,16 @@
+/*
+original pink fec7d7
+# f9f8fc
+#fec7d7
+#505A5B
+
+light gray
+D7D7E1
+
+med lavender
+C6C0E2
+*/
+
 * {
     margin: 0;
     font-family: "Recursive", monospace;
@@ -5,45 +18,52 @@
 }
 
 body {
-    background-color: #d9d4e7;
+    background-color: #575760;
     color: #0e172c;
     text-align: left;
     font-size: 1.25rem;
-   
 }
 
 nav {
     min-height: 10vh;
     display: flex;
     align-items: center;
-background-color: #fec7d7;
-box-shadow: 4px 5px 0px 0px #383838;
-    border: 2px solid #383838;
-    border-radius: 30px;
-    width: auto;
-
+    width: 100%;
+    padding-right: 1%;
+    padding-left: 1%;
 }
-.nav-links {
-    width: 50%;
+.nav-list {
+    height: 10vh;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     list-style: none;
+    box-shadow: 4px 5px 0px 0px #38383E;
+    border-radius: 30px;
+    justify-content: space-around;
+    background-color: #D2A5B1;
+   
+}
 
-    border-right: 2px solid #383838;
-    border-left: 2px solid #383838;
-
+.nav-link {
+    gap: 0;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 15vh;
+    border: 2px solid #38383E;
 }
 
 .wrapper {
-   height: 50px;
-  font-size: 20px;
     margin-left: auto;
+    padding-right: 10vh;
 }
-h1, h2 {
-    text-shadow: 4px 4px 0 #fff;
+
+h1,
+h2 {
+    text-shadow: 4px 4px 0 #f8f2f6;
 }
-main {
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,19 +71,23 @@ main {
     padding-left: 5vh;
     margin-left: auto;
     margin-right: auto;
-    background-color: #f9f8fc;
+    background-color: #d9d4e7;
     box-shadow: 4px 5px 0px 0px #383838;
     border: 2px solid #383838;
     border-radius: 30px;
-    width: 55vh;
-    height: 60vh;
-   
+    width: calc(60%);
+    height: calc(80%);
+    min-width: 55vh;
+    min-height: 60vh;
 }
 
-
+.projects {
+}
 
 .link {
     cursor: pointer;
+    display: inline-block;
+    position: relative;
 }
 
 .link:hover {
@@ -75,8 +99,41 @@ main {
     border-radius: 30px 30px;
 }
 
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+
+.hover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+a {
+  text-decoration: none;
+}
+a:link {
+  color: none;
+}
+a:visited {
+  color: none;
+}
 
 /* toggle */
 .toggle--checkbox {
-    display: none;
-  }
+    cursor: pointer;
+}
