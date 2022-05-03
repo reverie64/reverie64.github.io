@@ -1,20 +1,13 @@
-
+import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Main from "./components/Main";
+import RouteSwitch from "./components/RouteSwitch";
 
 const App = () => {
     return (
         <div className="App">
             <Navbar />
-            <Main />
-            <About />
-
-            <Contact />
-
-            <Projects />
+            <RouteSwitch />
+            <Outlet />
         </div>
     );
 };

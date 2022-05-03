@@ -1,7 +1,7 @@
 const About = () => {
     return (
         <main className="container">
-            <h1>About me:</h1>
+            <h1 className="head-text">About me</h1>
             <p>
                 - I am a self taught front end developer based in Austin, TX.</p>
                 <p>The typical millennial backstory:
@@ -16,12 +16,14 @@ const About = () => {
                 [insert something here to show passionate but a different
                 phrase] Insert Link to tech stacks and tools or pit by this???
             </p>
-            <p>- Tech stacks: React, JavaScript, HTML, CSS, Git, Linux, RESTFUL APIs, CRUD
+            <p>- Tech languages, tools and platforms/ just say technologies??: React, JavaScript, HTML, CSS, Git, Linux, RESTFUL APIs, CRUD
 -Tools:
 - I’m currently learning …  Learn asap to add: nodejs, MongoDB, hydrogen/sanity,, nextJs, redux
 </p> <p>After web accessibility: human friendly web apps, simple and clean layout that are easy to navigate, finding ways to improve web interactivity for all 
 readable code? 
-whats next for me: Want to explore machine learning and interested in ethical applications in the world of ai.
+whats next for me: 
+Typescript, 
+no: Want to explore machine learning and interested in ethical applications in the world of ai.
 </p>
 <p> Other interests: anime, video games, hiking, 
  </p>

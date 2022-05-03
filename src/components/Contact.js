@@ -10,34 +10,30 @@ const Contact = () => {
     const mail = () => window.open("mailto: kristinh889@gmail.com");
     return (
         <div className="container">
-            <p>
-                <h1>How to reach me</h1>
-          
-          
-                visit my{" "}
-                <FontAwesomeIcon
-                    icon={faGithub}
-                    onClick={git}
-                    alt="github"
-                    className="link"
-                />
-                <br />
-                 send me an{" "}
-                <FontAwesomeIcon
-                    icon={faEnvelope}
-                    onClick={mail}
-                    alt="email"
-                    className="link"
-                />
-                <br />
-                or find me on{" "}
-                <FontAwesomeIcon
-                    icon={faLinkedin}
-                    onClick={linkedin}
-                    alt="linkedin"
-                    className="link"
-                />
-            </p>
+            <h1 className="head-text">How to reach me</h1>
+            <div className="content"> 
+            visit my
+            <FontAwesomeIcon
+                icon={faGithub}
+                onClick={git}
+                alt="github"
+                className="link"
+            />
+            send me an
+            <FontAwesomeIcon
+                icon={faEnvelope}
+                onClick={mail}
+                alt="email"
+                className="link"
+            />
+            or find me on
+            <FontAwesomeIcon
+                icon={faLinkedin}
+                onClick={linkedin}
+                alt="linkedin"
+                className="link"
+            />
+            </div>
         </div>
     );
 };

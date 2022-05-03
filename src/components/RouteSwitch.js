@@ -1,25 +1,22 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import App from "../App";
-import About from "./About"
+import About from "./About";
 import Contact from "./Contact";
 import Main from "./Main";
+import NotFound from "./NotFound";
 import Projects from "./Projects";
 
 const RouteSwitch = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<Main />} />
+                <Route path="about" element={<About />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="projects" element={<Projects />} />
+                <Route path="*" element={<NotFound />} />
 
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/home" element={<Main />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
-
-      </Routes>
-    </BrowserRouter>
-  );
+        </Routes>
+    );
 };
 
 export default RouteSwitch;

@@ -2,8 +2,9 @@ const Projects = () => {
 
     return (
         <div className="container">
-            <h1>Projects</h1>
-            <div className="project">
+            <h1 className="head-text">Projects</h1>
+         <div className="content">
+
                 <h2> Library App </h2>
                 <ul>
                     <li>

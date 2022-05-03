@@ -18,7 +18,7 @@ C6C0E2
 }
 
 body {
-    background-color: #575760;
+    background-color: #E9E3EF;
     color: #0e172c;
     text-align: left;
     font-size: 1.25rem;
@@ -27,7 +27,6 @@ body {
 nav {
     min-height: 10vh;
     display: flex;
-    align-items: center;
     width: 100%;
     padding-right: 1%;
     padding-left: 1%;
@@ -39,7 +38,6 @@ nav {
     list-style: none;
     box-shadow: 4px 5px 0px 0px #38383E;
     border-radius: 30px;
-    justify-content: space-around;
     background-color: #D2A5B1;
    
 }
@@ -48,25 +46,29 @@ nav {
     gap: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 10vh;
     width: 15vh;
     border: 2px solid #38383E;
 }
+  
 
 .wrapper {
     margin-left: auto;
     padding-right: 10vh;
 }
 
-h1,
+
+
 h2 {
     text-shadow: 4px 4px 0 #f8f2f6;
 }
 
+
+
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
     padding-left: 5vh;
     margin-left: auto;
@@ -81,13 +83,28 @@ h2 {
     min-height: 60vh;
 }
 
-.projects {
+
+.head-text {
+    text-shadow: 4px 4px 0 #f8f2f6;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.home-head-text {
+    text-shadow: 4px 4px 0 #f8f2f6;
+}
+
+.content {
+    display: flex;
+ 
 }
 
 .link {
     cursor: pointer;
     display: inline-block;
     position: relative;
+   
 }
 
 .link:hover {
@@ -127,10 +144,10 @@ a {
   text-decoration: none;
 }
 a:link {
-  color: none;
+  color: black;
 }
 a:visited {
-  color: none;
+  color: black;
 }
 
 /* toggle */
