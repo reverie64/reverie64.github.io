@@ -12,7 +12,7 @@ const Contact = () => {
         <div className="container-border"> 
         <div className="container">
             <h1 className="head-text">How to reach me</h1>
-            <div className="content"> 
+            <div className="contact-content"> 
             visit my
             <FontAwesomeIcon
                 icon={faGithub}
@@ -34,7 +34,7 @@ const Contact = () => {
                 alt="linkedin"
                 className="link"
             />
-            questing nearby? get a coffee.
+            questing nearby and want to get coffee? i'll even cross the river.
             </div>
         </div>
         </div>
