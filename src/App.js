@@ -5,9 +5,13 @@ import RouteSwitch from "./components/RouteSwitch";
 const App = () => {
     return (
         <div className="App">
-            <Navbar />
-            <RouteSwitch />
-            <Outlet />
+            <div className="window">
+                <div className="x">x</div>
+
+                <Navbar />
+                <RouteSwitch />
+                <Outlet />
+            </div>
         </div>
     );
 };

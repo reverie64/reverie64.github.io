@@ -9,6 +9,9 @@ D7D7E1
 
 med lavender
 C6C0E2
+
+white 
+E9E3EF
 */
 
 * {
@@ -18,27 +21,65 @@ C6C0E2
 }
 
 body {
-    background-color: #E9E3EF;
+    background-color: #d9d4e7;
     color: #0e172c;
     text-align: left;
     font-size: 1.25rem;
+}
+.App {
+
+}
+
+.window {
+    border-radius: 10px 10px;
+    border: 10px solid #e9eba0;  
+    width: calc(95%);
+    height: calc(75%);
+    padding: 3vh;
+    background-color: rgb(172, 205, 235);
+    /*
+    padding-left: 3vh;
+   padding-bottom: 3vh;
+   padding-right: 3vh;*/
+}
+
+.x {
+    border-radius: 10px 10px;
+    border: 1px solid black;   
+    width: 30px;
+    text-align: center;
+position: absolute;
+    background-color: white;
+top: 0;
+left: 0;
 }
 
 nav {
     min-height: 10vh;
     display: flex;
     width: 100%;
-    padding-right: 1%;
-    padding-left: 1%;
+    padding: 1vh;
+    background-color: rgb(197, 233, 221);
+    border-radius: 10px 10px;
+    border: 2px solid #383838;
 }
 .nav-list {
     height: 10vh;
     width: 100%;
     display: flex;
     list-style: none;
-    box-shadow: 4px 5px 0px 0px #38383E;
-    border-radius: 30px;
+    /*box-shadow: 4px 5px 0px 0px #38383E;*/
+    border-radius: 10px 10px;
     background-color: #D2A5B1;
+    border: 2px solid #383838;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 15vh;
    
 }
 
@@ -50,35 +91,41 @@ nav {
     height: 10vh;
     width: 15vh;
     border: 2px solid #38383E;
+    border-radius: 10px 10px;
 }
   
-
-.wrapper {
-    margin-left: auto;
-    padding-right: 10vh;
-}
-
-
 
 h2 {
     text-shadow: 4px 4px 0 #f8f2f6;
 }
 
+.container-border {
+    border-radius: 10px 10px;
+    border: 2px solid #383838; 
+    padding: 1vh;
+    width: calc(60%);
+    height: calc(80%);
+    min-width: 55vh;
+    min-height: 60vh;
+    background-color: rgb(197, 233, 221);
+}
 
 
-.container {
+.container { /* change height scaling */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-left: 5vh;
     margin-left: auto;
     margin-right: auto;
-    background-color: #d9d4e7;
-    box-shadow: 4px 5px 0px 0px #383838;
+    background-color: #c2b7df;
+   /* box-shadow: 4px 5px 0px 0px #383838;*/
     border: 2px solid #383838;
     border-radius: 30px;
-    width: calc(60%);
-    height: calc(80%);
+
+    border-radius: 10px 10px;
+    /*width: calc(60%);
+    height: calc(80%);*/
     min-width: 55vh;
     min-height: 60vh;
 }
@@ -105,6 +152,16 @@ align-items: center;
     display: inline-block;
     position: relative;
    
+}
+
+button {
+    cursor: pointer;
+    border-radius: 10px 10px;
+    background-color: #D2A5B1;
+    border: 2px solid #383838;
+    height: 10vh;
+    width: 20vh;
+    font-size: 1.25rem;
 }
 
 .link:hover {
@@ -148,9 +205,4 @@ a:link {
 }
 a:visited {
   color: black;
-}
-
-/* toggle */
-.toggle--checkbox {
-    cursor: pointer;
 }

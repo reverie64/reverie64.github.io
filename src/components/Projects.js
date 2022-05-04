@@ -1,6 +1,7 @@
 const Projects = () => {
 
     return (
+        <div className="container-border"> 
         <div className="container">
             <h1 className="head-text">Projects</h1>
          <div className="content">
@@ -20,9 +21,10 @@ const Projects = () => {
             <div className="project">
                 <h2> Portfolio </h2>
                 <ul>
-                    <li>| <a href={`https://github.com/reverie64/library`}>view the magic beneath the surface - source</a></li>
+                    <li><a href={`https://github.com/reverie64/library`}>view the magic beneath the surface - source</a></li>
                     <li>Custom React web app using </li>
                 </ul>
+            </div>
             </div>
         </div>
     );

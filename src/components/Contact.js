@@ -9,6 +9,7 @@ const Contact = () => {
 
     const mail = () => window.open("mailto: kristinh889@gmail.com");
     return (
+        <div className="container-border"> 
         <div className="container">
             <h1 className="head-text">How to reach me</h1>
             <div className="content"> 
@@ -33,7 +34,9 @@ const Contact = () => {
                 alt="linkedin"
                 className="link"
             />
+            questing nearby? get a coffee.
             </div>
+        </div>
         </div>
     );
 };
