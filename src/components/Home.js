@@ -7,6 +7,19 @@ import {
     faLinux,
     faReact,
 } from "@fortawesome/free-brands-svg-icons";
+import styled from 'styled-components'
+
+
+const StyledH1 = styled.h1`
+   text-shadow: 4px 4px 0 #f8f2f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #383838;
+    border-radius: 10px 10px;
+    background-color: rgba(180, 153, 180, 0.479);
+`;
+
 
 /* 
 update hp/mp based on time 120/120 hp | 24/24 mp in am
@@ -18,11 +31,12 @@ const Home = () => {
     return (
         <div className="container-border">
             <main className="container">
-           
-                <h1 className="home-head-text">Kristin </h1>
+              <StyledH1>Kristin</StyledH1>  
+                
                 <h4> lvl 32 | HP: 90/120 | MP: 18/24</h4>
                 <div className="home-content">
                 <div className="home-img"></div>
+                
                 
                     <ul className="overview">
                        <p className="info-text">character overview</p> 
@@ -65,6 +79,8 @@ const Home = () => {
                             readable code.
                             <br /> <br /> blurb: what i do, character quote/ summary/ what charc is good at 
                         ? 
+                        <div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span> </div>
                 </div>
             </main>
         </div>

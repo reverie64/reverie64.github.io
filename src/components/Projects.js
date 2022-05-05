@@ -1,7 +1,11 @@
+import styled from 'styled-components';
+//!head text clss moved to home??
+
 const Projects = () => {
     return (
         <div className="container-border">
             <div className="container">
+            
                 <h1 className="head-text">Projects</h1>
                 <div className="projects-content">
                     <div className="project">
@@ -10,7 +14,7 @@ const Projects = () => {
                         <ul>
                             <li>
                                 <a
-                                    href={`https://www.kristinharris.dev/library/`}
+                                    href="https://www.kristinharris.dev/library/"
                                 >
                                     Live
                                 </a>
