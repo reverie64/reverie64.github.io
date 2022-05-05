@@ -16,7 +16,7 @@ const Projects = () => {
                                 </a>
 
                                 <a
-                                    href={`https://github.com/reverie64/library`}
+                                    href="https://github.com/reverie64/library" target="_blank" rel="noreferrer"
                                 >
                                     Source
                                 </a>
@@ -24,7 +24,7 @@ const Projects = () => {
                             <li>A CRUD web app - description here.</li>
                             <li>
                                 Utilized : React, firebase- auth, nosql cloud
-                                database, connected to Goodreads API{" "}
+                                database, connected to Goodreads API
                             </li>
                         </ul>
                     </div>
@@ -35,7 +35,7 @@ const Projects = () => {
                         <ul>
                             <li>
                                 <a
-                                    href={`https://github.com/reverie64/library`}
+                                    href="https://github.com/reverie64/library" target="_blank" rel="noreferrer"
                                 >
                                     the magic beneath the surface - view the source
                                 </a>

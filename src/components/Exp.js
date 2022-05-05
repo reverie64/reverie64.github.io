@@ -8,7 +8,7 @@ const Exp = () => {
             <div className="container">
                 <h1 className="head-text"> Exp</h1>
                 <section className="exp-content">
-                    exp- all skills, tech stacks 
+                    exp- all skills, tech stacks xp bar
                     <li>
                         needs to level up .... skills to unlock the talent
                         tree/spec "fullstack" -

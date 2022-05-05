@@ -35,6 +35,7 @@ const Contact = () => {
                 className="link"
             />
             questing nearby and want to get coffee? i'll even cross the river.
+            lfg?
             </div>
         </div>
         </div>

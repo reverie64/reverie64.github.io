@@ -8,6 +8,11 @@ import {
     faReact,
 } from "@fortawesome/free-brands-svg-icons";
 
+/* 
+update hp/mp based on time 120/120 hp | 24/24 mp in am
+and level/ xp bar by month? 5000/12000
+(?) with hover that says how was this calculated and explain.
+create custom tooltip later  */
 
 const Home = () => {
     return (
@@ -15,14 +20,17 @@ const Home = () => {
             <main className="container">
            
                 <h1 className="home-head-text">Kristin </h1>
-                <h4> lvl 32 HP: 90/100 MP: 70/100</h4>
+                <h4> lvl 32 | HP: 90/120 | MP: 18/24</h4>
                 <div className="home-content">
-                <div className="pic"></div>
+                <div className="home-img"></div>
                 
                     <ul className="overview">
-                        character overview
-                        <li> class: software developer - mage</li>
-                        <li> specialty front end </li>
+                       <p className="info-text">character overview</p> 
+                        
+                        <li> class: software developer</li>
+                        <li> specialty: front end </li>
+                        <li> pronouns she/ her </li>
+                        <li>  currently seeking new guild. </li>
                         <ul className="spells">
                   Spells
                   <li>
@@ -50,14 +58,13 @@ const Home = () => {
                  
                     </div>
                     <div className="blurb">
-                   blurb: what i do, character quote/ summary/ what charc is good at 
-                        ? <br /> <br />
+                  
                             Conjuring human friendly web apps, 
                             simple and clean layouts that are easy to navigate,
                             improved web interactivity, 
                             readable code.
-                    pronouns she/ her
-     currently seeking new guild.
+                            <br /> <br /> blurb: what i do, character quote/ summary/ what charc is good at 
+                        ? 
                 </div>
             </main>
         </div>

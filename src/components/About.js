@@ -13,11 +13,12 @@ const About = () => {
     return (
         <div className="container-border">
             <main className="container">
-                <h1 className="head-text">About xp hp mp bars?</h1>
+                <h1 className="head-text">character bio</h1>
                 <div className="about-content">
                     <div className="pic"></div>
-                    <ul> character bio/profile
-                        <li>Kristin Harris</li>
+                    <ul> 
+                   <h2>Kristin Harris</h2> 
+                   character bio/profile/ in depth  hp mp bars?
                         <li> lvl 32</li>
                         <li>software developer mage</li>
                         <li> town of refuge: austin - think of diff name </li>
@@ -31,8 +32,8 @@ const About = () => {
                 <div className="about-bottom">
                    
                     <ul>
-                        recent achievements:
-                        <li> re skilled - change from teacher to teacher </li>
+                        recent/pinned achievements:
+                        <li> re skilled - change from teacher to tech</li>
                         <li>
                             new campaign unlcoked covid- achievement survived
                             two years

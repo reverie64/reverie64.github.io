@@ -129,6 +129,9 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid #383838;
+    border-radius: 10px 10px;
+    background-color: rgba(180, 153, 180, 0.479);
 }
 
 .home-head-text {
@@ -144,13 +147,19 @@ h2 {
     display: flex;
 }
 
-.pic {
+.home-img {
     background-color: #858585;
-    width: 250px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px 10px;
     border: 7px solid #383838;
     margin-bottom: 2vh;
+}
+.lvl {
+    
+}
+.info-text {
+color: #6f6f79;
 }
 .spells {
     display: flex;
@@ -211,6 +220,20 @@ button {
     width: 20vh;
     font-size: 1.25rem;
 }
+
+footer {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font: 1.25rem;
+    color: #858585;
+}
+
+
+
+
 
 .link:hover {
     color: #fec7d7;
