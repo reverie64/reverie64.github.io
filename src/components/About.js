@@ -1,4 +1,4 @@
-
+import styled from 'styled-components';
 /* not sure about:
   <li> title:</li>
         <li>background</li>
@@ -6,8 +6,19 @@
                              <li>faction millennial </li>
 spawn zone amarillo
 stats, skills, talents, exp. level up 
-dislikes: escort quests
+dislikes: escort quests, choosing color palettes
 */
+
+
+const StyledDiv = styled.div`
+display: flex;
+  width: 200px;
+  height: 250px;
+    border: 2px solid #383838;
+    border-radius: 10px 10px;
+    background-color: rgba(180, 153, 180, 0.479);
+`;
+
 
 const About = () => {
     return (
@@ -16,16 +27,17 @@ const About = () => {
                 <h1 className="head-text">character bio</h1>
                 <div className="about-content">
                     <div className="pic"></div>
-                    <ul> 
+                    <StyledDiv></StyledDiv>
+                    <ul>  
                    <h2>Kristin Harris</h2> 
-                   character bio/profile/ in depth  hp mp bars?
+                   character bio/profile/ in depth
                         <li> lvl 32</li>
                         <li>software developer mage</li>
-                        <li> town of refuge: austin - think of diff name </li>
+                        <li> town: austin - think of diff name </li>
                    <li>zone: texas hostile- red text </li>
                         <li>familiars: cisco and akari</li>
                         <li> currently chosen the front end talent tree</li>
-                        <li> questing: curretnly leveling up: </li>
+                        <li> questing: currently leveling up: </li>
                         <li>interests: anime, video games, hiking, food</li>
                     </ul>
                 </div>
@@ -35,12 +47,12 @@ const About = () => {
                         recent/pinned achievements:
                         <li> re skilled - change from teacher to tech</li>
                         <li>
-                            new campaign unlcoked covid- achievement survived
+                            new campaign unlocked covid- achievement survived
                             two years
                         </li>
                         pinned achievements: gain an apprentice.
                         like many in the millennial faction, she/i? discovered 
-                        her talent for spellcasting using the ancient tomes of xanga
+                        her talent using the ancient technologies of xanga
                         and myspace. also something about mod wii and linux emulators. 
                          
                     </ul>

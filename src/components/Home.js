@@ -8,6 +8,7 @@ import {
     faReact,
 } from "@fortawesome/free-brands-svg-icons";
 import styled from 'styled-components'
+import { faSpaghettiMonsterFlying } from "@fortawesome/free-solid-svg-icons";
 
 
 const StyledH1 = styled.h1`
@@ -25,28 +26,35 @@ const StyledH1 = styled.h1`
 update hp/mp based on time 120/120 hp | 24/24 mp in am
 and level/ xp bar by month? 5000/12000
 (?) with hover that says how was this calculated and explain.
-create custom tooltip later  */
+create custom tooltip later 
+ <div class="tooltip">Hover over me
+  </div>
+ <span class="tooltiptext">Tooltip text</span>
+currently seeking new guild. </li>
+*/
 
 const Home = () => {
     return (
         <div className="container-border">
             <main className="container">
-              <StyledH1>Kristin</StyledH1>  
-                
-                <h4> lvl 32 | HP: 90/120 | MP: 18/24</h4>
+              <StyledH1>Kristin </StyledH1>  
+          
+               
                 <div className="home-content">
                 <div className="home-img"></div>
                 
                 
-                    <ul className="overview">
+                    <ul className="overview">  
+                    <div>           HP  |||||||||||||||||||||||||  90/120 <br />
+                MP  ||||||||||||||||||||||     18/24 </div> <br />
                        <p className="info-text">character overview</p> 
                         
                         <li> class: software developer</li>
                         <li> specialty: front end </li>
                         <li> pronouns she/ her </li>
-                        <li>  currently seeking new guild. </li>
+                        <li>   </li>  
                         <ul className="spells">
-                  Spells
+                  Spells:
                   <li>
                     
                       <FontAwesomeIcon icon={faReact} alt="React" title="React"/>
@@ -67,10 +75,16 @@ const Home = () => {
                   <li>
                       
                       <FontAwesomeIcon icon={faLinux} alt="Linux" />
-                  </li> </ul>
+                  </li>
+                  <li>  
+                       <FontAwesomeIcon icon={faSpaghettiMonsterFlying} alt="Styled Components" />
+                       </li>   
+                       
+                    </ul>
+                    
                     </ul> 
                  
-                    </div>
+                    </div><h4> lvl 32 </h4>
                     <div className="blurb">
                   
                             Conjuring human friendly web apps, 
@@ -79,8 +93,7 @@ const Home = () => {
                             readable code.
                             <br /> <br /> blurb: what i do, character quote/ summary/ what charc is good at 
                         ? 
-                        <div class="tooltip">Hover over me
-  <span class="tooltiptext">Tooltip text</span> </div>
+                       
                 </div>
             </main>
         </div>

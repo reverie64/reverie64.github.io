@@ -20,12 +20,12 @@ const StyledFooter = styled.footer`
 
 
 const Footer = () => {
-
+// change icon to wand or something?
 
     return (
    
          <StyledFooter>
-<a  href="https://github.com/reverie64/"  target="_blank" rel="noreferrer"> Made with &#10084; by Kristin Harris </a>
+<a  href="https://github.com/reverie64/"  target="_blank" rel="noreferrer"> 🖌 by Kristin Harris		</a>
 </StyledFooter>
     
     );

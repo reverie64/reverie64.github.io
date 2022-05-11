@@ -1,5 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
+* {
+  margin: 0;
+}
   body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
@@ -7,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size:1.25rem;
     font-family: "Recursive", monospace;
     box-sizing: border-box;
+    
   }
 
 h2 {

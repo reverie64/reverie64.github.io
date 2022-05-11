@@ -19,35 +19,31 @@ const App = () => {
 
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
         if (savedTheme && ["dark", "light"].includes(savedTheme)) {
-          setTheme(savedTheme);
+            setTheme(savedTheme);
         } else if (prefersDark) {
-          setTheme("dark");
+            setTheme("dark");
         }
-      }, []);
+    }, []);
     return (
         <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      <>
-      <GlobalStyles/>
-        <div className="App">
-            <div className="window">
-                <div className="x">x</div>
-               
-                <Navbar toggleTheme={toggleTheme} 
+            <>
+                <GlobalStyles />
+                <div className="App">
+                    <Navbar
+                        toggleTheme={toggleTheme}
                         isDarkTheme={isDarkTheme}
-                />
-                <RouteSwitch />
-             
-            </div>
-            <Footer />
+                    />
+                    <RouteSwitch />
+                </div>
+                <Footer />
                 <Outlet />
-        </div>
-        </>
-    </ThemeProvider>
+            </>
+        </ThemeProvider>
     );
 };
 
 export default App;
-

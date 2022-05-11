@@ -1,53 +1,31 @@
-/*
-original pink fec7d7
-# f9f8fc
-#fec7d7
-#505A5B
+/* svg graphic to replace: nav, container, borders, button 
+black 383838
+dark grey 686857a
+lavender c2b7df , tint b499b4
+pink d2a5b1
+light greyish acaeec5
+linen f5ebdd
 
-light gray
-D7D7E1
 
-med lavender
-C6C0E2
+??
+melon fbb7ae 
 
-white 
-E9E3EF
-*/
-
-* {
-    margin: 0;
-   
-}
+**********************
 
 body {
     text-align: left;
-    
 }
 
 
-.window {
-    border-radius: 10px 10px;
-    border: 10px solid rgb(197, 233, 221);
-    width: calc(95%);
-    height: calc(75%);
-    padding: 3vh;
-    background-color: rgb(172, 205, 235);
-}
 
-.x {
-    border-radius: 10px 10px;
-    border: 1px solid black;
-    width: 30px;
-    text-align: center;
-    background-color: #e9eba0;
-    position: absolute;
-    display: none;
-}
+*/ 
+
+
 
 nav {
- /*border needs to go in global */
+
  padding: 1vh;
- background-color: rgb(197, 233, 221);
+ background-color: #acaec5;
  border-radius: 10px 10px;
  border: 2px solid #383838;
 }
@@ -63,7 +41,7 @@ nav {
     height: calc(80%);
     min-width: 95vh;
     min-height: 60vh;
-    background-color: rgb(197, 233, 221);
+    background-color: #acaec5;
 }
 
 .container {
@@ -87,7 +65,7 @@ nav {
 }
 
 .home-head-text {
-    text-shadow: 4px 4px 0 #f8f2f6;
+    text-shadow: 4px 4px 0 #f5ebdd;
 }
 
 .content {
@@ -161,12 +139,6 @@ color: #6f6f79;
     width: 50%;
 }
 
-
-
-
-
-
-
 .link:hover {
     color: #fec7d7;
     text-shadow: 0 0 15px #fec7d7;
@@ -199,10 +171,6 @@ color: #6f6f79;
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-
-
-
-
 
 .tooltip {
     position: relative;

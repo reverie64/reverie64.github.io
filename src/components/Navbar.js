@@ -45,10 +45,12 @@ const StyledLogo = styled.div`
 
 
 
-
 const Navbar = ({ toggleTheme, isDarkTheme }) => {
 
     
+
+
+
     return (
         <StyledNav>
       
