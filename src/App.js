@@ -1,12 +1,29 @@
+import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 
 import { lightTheme, darkTheme, GlobalStyles } from "./theme";
+
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import RouteSwitch from "./components/RouteSwitch";
+
+import ContainerBg from "./ContainerBg.svg";
+
+/*   <div className="container-border">
+
+*/
+
+/*
+import { ReactComponent as ContainerBg } from "./ContainerBg.svg";
+const StyledCont = styled.div`
+    background-image: url(${ContainerBg});
+`;
+ <StyledCont>
+
+ */
 
 const App = () => {
     const [theme, setTheme] = useState("light");
@@ -28,18 +45,43 @@ const App = () => {
             setTheme("dark");
         }
     }, []);
+
+
+
     return (
         <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
             <>
                 <GlobalStyles />
                 <div className="App">
-                <div className="container-border">
-                    <Navbar
-                        toggleTheme={toggleTheme}
-                        isDarkTheme={isDarkTheme}
-                    />
-                    <RouteSwitch />
+                    <div
+                        className="container-border"
+                        style={{
+                            backgroundImage: `url(${ContainerBg})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
+                            width: "calc(80%)",
+                            height: "calc(70%)",
+                            border: "1px solid",
+                            marginLeft: "auto",
+                            marginRight: "auto",
+                            padding: "5%"
+                        }}
+                    >
+                        <Navbar />
+                        <RouteSwitch />
                     </div>
+                    <button onClick={toggleTheme}>
+                        {" "}
+                        {isDarkTheme ? (
+                            <span aria-label="Light mode" role="img">
+                                🌞
+                            </span>
+                        ) : (
+                            <span aria-label="Dark mode" role="img">
+                                🌜
+                            </span>
+                        )}
+                    </button>
                 </div>
                 <Footer />
                 <Outlet />

@@ -17,14 +17,16 @@ h2 {
     text-shadow: 4px 4px 0 #f8f2f6;
 }
   
-
+li {
+  list-style: none;
+}
   button {
     cursor: pointer;
     border-radius: 10px 10px;
     background-color: #d2a5b1;
     border: 2px solid #383838;
-    height: 10vh;
-    width: 20vh;
+    height: 7vh;
+    width: 12vh;
     font-size: 1.25em;
 }
 
@@ -37,6 +39,28 @@ a:link {
 a:visited {
     color: black;
 }
+
+
+.info-text {
+color: #6f6f79;
+}
+
+
+.link {
+    cursor: pointer;
+  
+}
+
+.link:hover {
+    color: #fec7d7;
+    text-shadow: 0 0 15px #fec7d7;
+    transition: all 0.5s ease;
+    transform: scale(1.5);
+    background-color: #383838;
+    border-radius: 30px 30px;
+}
+
+
 
 `;
 

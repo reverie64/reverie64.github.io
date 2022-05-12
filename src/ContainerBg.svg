@@ -1,4 +1,6 @@
-export const containerbg = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 146 94" shape-rendering="crispEdges">
+
+
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 146 94" shape-rendering="crispEdges">
 <metadata>Made with Pixels to Svg https://codepen.io/shshaw/pen/XbxvNj</metadata>
 <path stroke="#565464" d="M1 0h1M144 0h1M0 1h1M145 1h1M3 3h1M142 3h1M3 90h1M142 90h1M0 92h1M145 92h1M1 93h1M144 93h1" />
 <path stroke="#68657a" d="M2 0h1M143 0h1M1 1h1M144 1h1M0 2h1M145 2h1M4 3h4M137 3h5M3 4h1M142 4h1M3 5h1M142 5h1M3 6h1M142 6h1M3 7h1M142 7h1M3 8h1M142 85h1M3 86h1M142 86h1M3 87h1M142 87h1M3 88h1M142 88h1M3 89h1M142 89h1M4 90h5M138 90h4M0 91h1M145 91h1M1 92h1M144 92h1M2 93h1M143 93h1" />

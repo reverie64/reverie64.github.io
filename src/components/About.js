@@ -27,7 +27,7 @@ const About = () => {
                 <h1 className="head-text">character bio</h1>
                 <div className="about-content">
                     <div className="pic"></div>
-                    <StyledDiv></StyledDiv>
+                    <StyledDiv>image placholder</StyledDiv>
                     <ul>  
                    <h2>Kristin Harris</h2> 
                    character bio/profile/ in depth
