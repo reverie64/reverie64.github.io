@@ -42,10 +42,10 @@ a:visited {
 
 export const lightTheme = {
     body: "#d9d4e7",
-    text: "#0e172c",
+    text: "#383838",
 };
 
 export const darkTheme = {
-    body: "#121620",
-    text: "#f1f1f1",
+    body: "#68657a",
+    text: "#f5ebdd",
 };

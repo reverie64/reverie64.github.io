@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Projects = () => {
     return (
-        <div className="container-border">
+    
             <div className="container">
             
                 <h1 className="head-text">Projects</h1>
@@ -49,7 +49,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-        </div>
+      
     );
 };
 

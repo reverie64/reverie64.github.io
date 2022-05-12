@@ -25,6 +25,7 @@ const Footer = () => {
     return (
    
          <StyledFooter>
+         
 <a  href="https://github.com/reverie64/"  target="_blank" rel="noreferrer"> 🖌 by Kristin Harris		</a>
 </StyledFooter>
     

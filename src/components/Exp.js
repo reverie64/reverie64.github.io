@@ -4,7 +4,7 @@
 
 const Exp = () => {
     return (
-        <div className="container-border">
+
             <div className="container">
                 <h1 className="head-text"> Exp</h1>
                 <section className="exp-content">
@@ -33,7 +33,7 @@ const Exp = () => {
                 </section>
                 <button> resume</button>
             </div>
-        </div>
+      
     );
 };
 

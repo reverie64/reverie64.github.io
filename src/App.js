@@ -33,11 +33,13 @@ const App = () => {
             <>
                 <GlobalStyles />
                 <div className="App">
+                <div className="container-border">
                     <Navbar
                         toggleTheme={toggleTheme}
                         isDarkTheme={isDarkTheme}
                     />
                     <RouteSwitch />
+                    </div>
                 </div>
                 <Footer />
                 <Outlet />

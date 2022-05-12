@@ -18,7 +18,9 @@ const StyledUl = styled.ul`
     /*box-shadow: 4px 5px 0px 0px #38383E;*/
     border-radius: 10px 10px;
     background-color: #d2a5b1;
-    border: 2px solid #383838;
+    border-top: 2px solid #38383e;
+    border-left: 2px solid #38383e;
+    border-right: 2px solid #38383e;
 `;
 
 const StyledLi = styled.li`
@@ -28,7 +30,12 @@ const StyledLi = styled.li`
     justify-content: center;
     height: 10vh;
     width: 15vh;
-    border: 2px solid #38383e;
+    border-top: 2px solid #38383e;
+    border-left: 2px solid #38383e;
+    border-right: 2px solid #38383e;
+
+
+
     border-radius: 10px 10px;
 `;
 

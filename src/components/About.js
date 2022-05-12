@@ -22,7 +22,7 @@ display: flex;
 
 const About = () => {
     return (
-        <div className="container-border">
+      
             <main className="container">
                 <h1 className="head-text">character bio</h1>
                 <div className="about-content">
@@ -58,7 +58,7 @@ const About = () => {
                     </ul>
                 </div>
             </main>
-        </div>
+      
     );
 };
 

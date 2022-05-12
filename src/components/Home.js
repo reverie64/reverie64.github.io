@@ -19,6 +19,7 @@ const StyledH1 = styled.h1`
     border: 2px solid #383838;
     border-radius: 10px 10px;
     background-color: rgba(180, 153, 180, 0.479);
+   
 `;
 
 
@@ -35,8 +36,9 @@ currently seeking new guild. </li>
 
 const Home = () => {
     return (
-        <div className="container-border">
+       
             <main className="container">
+            
               <StyledH1>Kristin </StyledH1>  
           
                
@@ -45,7 +47,7 @@ const Home = () => {
                 
                 
                     <ul className="overview">  
-                    <div>           HP  |||||||||||||||||||||||||  90/120 <br />
+                    <div>           HP   90/120 <br />
                 MP  ||||||||||||||||||||||     18/24 </div> <br />
                        <p className="info-text">character overview</p> 
                         
@@ -96,7 +98,7 @@ const Home = () => {
                        
                 </div>
             </main>
-        </div>
+     
     );
 };
 
