@@ -1,6 +1,8 @@
-import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
 import styled from "styled-components";
+
+import Logo from "../images/Logo.svg"
 
 const StyledNav = styled.nav`
     min-height: 10vh;
@@ -17,11 +19,9 @@ const StyledUl = styled.ul`
     background-color: #c2b7df;
      border-radius: 10px 10px;
     */
-`;
-
-const StyledLi = styled.li`
-    
-    display: flex;
+li {
+   
+     display: flex;
     align-items: center;
     justify-content: center;
     height: 10vh;
@@ -29,58 +29,53 @@ const StyledLi = styled.li`
     border-top: 2px solid #38383e;
     border-left: 2px solid #38383e;
     border-right: 2px solid #38383e;
-    background-color: #d2a5b1;
+   
+    border-radius: 10px 10px; }
 
-    border-radius: 10px 10px;
+  
+
 `;
 
-//! change type to img later
+
 const StyledLogo = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 10vh;
     width: 15vh;
+        background-image: url(${Logo});
+                      background-repeat: no-repeat;
 `;
 
+
+
+
 const Navbar = () => {
-const  location   = useLocation();
-
-
-    const activeTab = () => {
-     
-
-        /* 
-        take all pages 
-        find current page
-         if youre on the page, style: highlight title in nav, no bottom border class = current tab li
-            else remain the same - (bottom border on tab -- reg li)
-       
-        
-        */
-    };
-
-
 
     return (
         <StyledNav>
-      {location.pathname}
+        
             <StyledUl>
-                <Link to="/">
-                    <StyledLogo></StyledLogo>
-                </Link>
-                <Link to="/about">
-                    <StyledLi>about</StyledLi>
-                </Link>
-                <Link to="/exp">
-                    <StyledLi>exp</StyledLi>
-                </Link>
-                <Link to="/projects">
-                    <StyledLi>projects</StyledLi>
-                </Link>
-                <Link to="/contact">
-                    <StyledLi>contact</StyledLi>
-                </Link>
+                <NavLink to="/"style={({ isActive }) => ({
+    background: isActive ? '#c2b7df' : '#d2a5b1',
+  })}> <li><StyledLogo /> </li>  </NavLink >
+                <NavLink to="/about"   style={({ isActive }) => ({
+    background: isActive ? '#c2b7df' : '#d2a5b1',
+  })}>
+                    <li >about</li>
+                </NavLink>
+                <NavLink to="/exp" style={({ isActive }) => ({
+    background: isActive ? '#c2b7df' : '#d2a5b1',
+  })} >
+                    <li >exp</li>
+                </NavLink>
+                <NavLink to="/projects" style={({ isActive }) => ({
+    background: isActive ? '#c2b7df' : '#d2a5b1',
+  })}>
+                    <li >projects</li>
+                </NavLink>
+                <NavLink to="/contact" style={({ isActive }) => ({
+    background: isActive ? '#c2b7df' : '#d2a5b1',
+  })} >
+                    <li>contact</li>
+                </NavLink>
             </StyledUl>
         </StyledNav>
     );

@@ -31,9 +31,17 @@ nav {
     background-color: #acaec5;
 }
 
+.container-border {
+    border-image: url('./ContainerBg.svg') 30;
+    border-image-slice: 10;
+    border-image-width: 20;
+}
 
-*/ 
 
+*/
+.pix {
+    filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='b' x='0' y='0'%3E%3CfeFlood x='4' y='4' height='2' width='2'/%3E%3CfeComposite width='10' height='10'/%3E%3CfeTile result='a'/%3E%3CfeComposite in='SourceGraphic' in2='a' operator='in'/%3E%3CfeMorphology operator='dilate' radius='5'/%3E%3C/filter%3E%3C/svg%3E#b");
+}
 
 .container {
     /* 
@@ -44,18 +52,17 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  
-    
+
+    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     /* box-shadow: 4px 5px 0px 0px #383838;*/
-    border: 2px solid #383838;
+  
 
- flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .head-text {
- 
 }
 
 .home-head-text {
@@ -75,12 +82,10 @@ nav {
     background-color: #858585;
     width: 150px;
     height: 150px;
-    border-radius: 10px 10px;
+
     border: 7px solid #383838;
     margin-bottom: 2vh;
 }
-
-
 
 .about-content {
     display: flex;
@@ -95,7 +100,6 @@ nav {
     flex-direction: column;
     align-items: flex-start;
 }
-
 
 .img {
     background-color: #858585;
@@ -112,17 +116,13 @@ nav {
     width: 50%;
 }
 
-
-
-
-
 .tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
-  }
-  
-  .tooltip .tooltiptext {
+}
+
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -130,12 +130,12 @@ nav {
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-  
+
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-  }
-  
-  .tooltip:hover .tooltiptext {
+}
+
+.tooltip:hover .tooltiptext {
     visibility: visible;
-  }
+}

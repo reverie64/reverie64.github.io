@@ -28,6 +28,7 @@ li {
     height: 7vh;
     width: 12vh;
     font-size: 1.25em;
+    display: none;
 }
 
   a {

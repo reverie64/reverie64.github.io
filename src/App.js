@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import RouteSwitch from "./components/RouteSwitch";
 
-import ContainerBg from "./ContainerBg.svg";
+import ContainerBg from "./images/ContainerBg.svg";
 
 /*   <div className="container-border">
 
@@ -23,7 +23,44 @@ const StyledCont = styled.div`
 `;
  <StyledCont>
 
+
+
+  backgroundImage: `url(${ContainerBg})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
+                            width: "calc(80%)",
+                            height: "calc(70%)",
+                            border: "1px solid",
+                            marginLeft: "auto",
+                            marginRight: "auto",
+                            padding: "5%",
+                               style={{
+                           
+                            borderImageSource: `url(${ContainerBg})`
+                        }}
  */
+
+
+const StyledCont = styled.div`           
+
+border-radius: 15px;
+   height: calc(80%);
+   width: calc(80%);
+background-image: url(${ContainerBg});
+background-repeat: no-repeat;
+margin-left: auto;
+margin-right: auto;
+padding-left: 5%;
+padding-right: 5%;
+padding-bottom: 5%;
+display: flex; 
+flex-wrap: wrap;
+min-height: 80vh;
+min-width: 70vh;
+
+`;
+
+
 
 const App = () => {
     const [theme, setTheme] = useState("light");
@@ -53,23 +90,11 @@ const App = () => {
             <>
                 <GlobalStyles />
                 <div className="App">
-                    <div
-                        className="container-border"
-                        style={{
-                            backgroundImage: `url(${ContainerBg})`,
-                            backgroundRepeat: "no-repeat",
-                            backgroundSize: "cover",
-                            width: "calc(80%)",
-                            height: "calc(70%)",
-                            border: "1px solid",
-                            marginLeft: "auto",
-                            marginRight: "auto",
-                            padding: "5%"
-                        }}
+                    <StyledCont
                     >
                         <Navbar />
                         <RouteSwitch />
-                    </div>
+                    </StyledCont>
                     <button onClick={toggleTheme}>
                         {" "}
                         {isDarkTheme ? (
