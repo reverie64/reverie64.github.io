@@ -3,7 +3,7 @@ const NotFound = () => {
     return (
         <div className="container-border"> 
         <div className="container">
-            <h1 className="head-text"> 404</h1>
+            <h1> 404</h1>
          <div className="content">
          so take the game cartridge out, blow in it and put it back in.
          that always works!

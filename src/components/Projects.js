@@ -1,12 +1,28 @@
 import styled from 'styled-components';
-//!head text clss moved to home??
+
+
+/* .img {
+    background-color: #858585;
+    width: 30vh;
+    height: 20vh;
+}
+
+.projects-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.project {
+    width: 50%;
+}*/
+
 
 const Projects = () => {
     return (
     
             <div className="container">
             
-                <h1 className="head-text">Projects</h1>
+                <h1>Projects</h1>
                 <div className="projects-content">
                     <div className="project">
                         <h2> Library App </h2>

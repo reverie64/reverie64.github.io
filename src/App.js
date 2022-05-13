@@ -53,6 +53,7 @@ margin-right: auto;
 padding-left: 5%;
 padding-right: 5%;
 padding-bottom: 5%;
+padding: 5%;
 display: flex; 
 flex-wrap: wrap;
 min-height: 80vh;
@@ -90,9 +91,10 @@ const App = () => {
             <>
                 <GlobalStyles />
                 <div className="App">
+                 <Navbar />
                     <StyledCont
                     >
-                        <Navbar />
+                       
                         <RouteSwitch />
                     </StyledCont>
                     <button onClick={toggleTheme}>

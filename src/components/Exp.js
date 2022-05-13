@@ -1,12 +1,14 @@
 //     sections: exp, ed, resume- what to call it? achievements?
 //obtained degrees?
 
+import Button from "../images/Button.svg";
+
 
 const Exp = () => {
     return (
 
             <div className="container">
-                <h1 className="head-text"> Exp</h1>
+                <h1 > Exp</h1>
                 <section className="exp-content">
                     exp- all skills, tech stacks xp bar
                     <li>
@@ -31,6 +33,7 @@ const Exp = () => {
                 39 graduate hours with special interest/relevant coursework in diversity and inclusion. 
                 responsiblity to continue to quest so web is accessible for all.
                 </section>
+               
                 <button> resume</button>
             </div>
       

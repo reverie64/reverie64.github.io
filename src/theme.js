@@ -1,5 +1,9 @@
+import Section from "./images/Section.svg";
+
 import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
+
+
 * {
   margin: 0;
 }
@@ -13,8 +17,42 @@ export const GlobalStyles = createGlobalStyle`
     
   }
 
+  .container {
+    /* 
+    background-color: #c2b7df;
+    border-radius: 10px 10px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;  */
+    margin-left: auto;
+    margin-right: auto;
+    /* box-shadow: 4px 5px 0px 0px #383838;*/
+}
+
+
+
 h2 {
     text-shadow: 4px 4px 0 #f8f2f6;
+}
+
+h1 {
+  display: flex;
+justify-content: center;
+align-items: center;       
+ height: 10vh;
+ width: 10vh;
+ background-image: url(${Section});
+background-repeat: no-repeat;
+
+
+    text-shadow: 4px 4px 0 #f8f2f6;
+    text-align: center;
+    //  border: 2px solid #383838;
+    // border-radius: 10px 10px;
+    // background-color: rgba(180, 153, 180, 0.479);
+    padding: 4vh;
 }
   
 li {
@@ -60,6 +98,12 @@ color: #6f6f79;
     background-color: #383838;
     border-radius: 30px 30px;
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 

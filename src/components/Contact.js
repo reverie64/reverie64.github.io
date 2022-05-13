@@ -2,6 +2,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
+/* .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}*/ 
+
+
+
+
 const Contact = () => {
     const git = () => window.open("http://github.com/reverie64");
     const linkedin = () =>
@@ -11,7 +20,7 @@ const Contact = () => {
     return (
         
         <div className="container">
-            <h1 className="head-text">How to reach me</h1>
+            <h1 >How to reach me</h1>
             <div className="contact-content"> 
             visit my
             <FontAwesomeIcon

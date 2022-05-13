@@ -7,6 +7,14 @@ import styled from 'styled-components';
 spawn zone amarillo
 stats, skills, talents, exp. level up 
 dislikes: escort quests, choosing color palettes
+
+.about-content {
+    display: flex;
+}
+
+.about-bottom {
+    display: flex;
+}
 */
 
 
@@ -24,7 +32,7 @@ const About = () => {
     return (
       
             <main className="container">
-                <h1 className="head-text">character bio</h1>
+                <h1>character bio</h1>
                 <div className="about-content">
                     <div className="pic"></div>
                     <StyledDiv>image placholder</StyledDiv>
