@@ -8,8 +8,8 @@ const Exp = () => {
     return (
 
             <div className="container">
-                <h1 > Exp</h1>
-                <section className="exp-content">
+                <h1 > Exp</h1>  <p className="info-text">title - stats?</p>
+                <section className="content">
                     exp- all skills, tech stacks xp bar
                     <li>
                         needs to level up .... skills to unlock the talent

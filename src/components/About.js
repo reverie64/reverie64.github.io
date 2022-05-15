@@ -15,8 +15,13 @@ dislikes: escort quests, choosing color palettes
 .about-bottom {
     display: flex;
 }
-*/
 
+
+const StyledContent = styled.div`
+ display: flex;
+ flex-direction: row;
+`;
+*/
 
 const StyledDiv = styled.div`
 display: flex;
@@ -33,12 +38,15 @@ const About = () => {
       
             <main className="container">
                 <h1>character bio</h1>
-                <div className="about-content">
+                <p className="info-text">character bio?</p>
+
+            
+                <div className="content">
                     <div className="pic"></div>
-                    <StyledDiv>image placholder</StyledDiv>
+                    <StyledDiv>image placeholder</StyledDiv>
                     <ul>  
                    <h2>Kristin Harris</h2> 
-                   character bio/profile/ in depth
+                   character bio/profile/ in depth/stats?
                         <li> lvl 32</li>
                         <li>software developer mage</li>
                         <li> town: austin - think of diff name </li>
@@ -49,7 +57,7 @@ const About = () => {
                         <li>interests: anime, video games, hiking, food</li>
                     </ul>
                 </div>
-                <div className="about-bottom">
+                <div className="content">
                    
                     <ul>
                         recent/pinned achievements:

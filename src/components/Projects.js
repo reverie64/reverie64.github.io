@@ -1,30 +1,34 @@
 import styled from 'styled-components';
 
 
-/* .img {
-    background-color: #858585;
-    width: 30vh;
-    height: 20vh;
-}
+/* 
 
 .projects-content {
     display: flex;
     flex-direction: row;
+    space around?
 }
 
 .project {
     width: 50%;
+
+
 }*/
 
+const StyledProject = styled.div`
+display:flex;
+flex-direction: row;
+justify-content: space-evenly;
+`
 
 const Projects = () => {
     return (
     
             <div className="container">
             
-                <h1>Projects</h1>
-                <div className="projects-content">
-                    <div className="project">
+                <h1>Projects</h1>   <p className="info-text"> inventory </p>
+                <div className="content">
+                    <StyledProject>
                         <h2> Library App </h2>
                         <div className="img"></div>
                         <ul>
@@ -32,13 +36,13 @@ const Projects = () => {
                                 <a
                                     href="https://www.kristinharris.dev/library/"
                                 >
-                                    Live
+                                    Live| 
                                 </a>
 
                                 <a
                                     href="https://github.com/reverie64/library" target="_blank" rel="noreferrer"
                                 >
-                                    Source
+                                     Source
                                 </a>
                             </li>
                             <li>A CRUD web app - description here.</li>
@@ -47,22 +51,22 @@ const Projects = () => {
                                 database, connected to Goodreads API
                             </li>
                         </ul>
-                    </div>
+                        </StyledProject>
 
-                    <div className="project">
+                   <StyledProject>
                         <h2> Portfolio </h2>
                         <div className="img"></div>
                         <ul>
                             <li>
                                 <a
-                                    href="https://github.com/reverie64/library" target="_blank" rel="noreferrer"
+                                    href="https://github.com/reverie64/reverie64.github.io" target="_blank" rel="noreferrer"
                                 >
                                     the magic beneath the surface - view the source
                                 </a>
                             </li>
                             <li>Custom React web app using </li>
                         </ul>
-                    </div>
+                        </StyledProject>
                 </div>
             </div>
       

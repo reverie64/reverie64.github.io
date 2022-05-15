@@ -56,8 +56,8 @@ padding-bottom: 5%;
 padding: 5%;
 display: flex; 
 flex-wrap: wrap;
-min-height: 80vh;
-min-width: 70vh;
+min-height: 70vh;
+min-width: 65vh;
 
 `;
 
@@ -83,6 +83,9 @@ const App = () => {
             setTheme("dark");
         }
     }, []);
+
+
+    
 
 
 

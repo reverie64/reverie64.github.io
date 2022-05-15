@@ -1,6 +1,6 @@
 import Section from "./images/Section.svg";
 
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle }  from "styled-components";
 export const GlobalStyles = createGlobalStyle`
 
 
@@ -18,38 +18,50 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .container {
-    /* 
-    background-color: #c2b7df;
-    border-radius: 10px 10px;
-   
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;  */
-    margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  //  background-color: #c2b7df;
+ //   border-radius: 10px 10px;
+ 
+  
+
+   margin-left: auto;
     margin-right: auto;
-    /* box-shadow: 4px 5px 0px 0px #383838;*/
+  
+}
+
+.img {
+    background-color: #858585;
+    width: 150px;
+    height: 150px;
+display: flex;
+    border: 7px solid #383838;
+    margin-bottom: 2vh;
+   // align-self: flex-start;
+  //  justify-self: flex-start;
+  //  flex-direction: column;
 }
 
 
+.sub {
+
+}
 
 h2 {
     text-shadow: 4px 4px 0 #f8f2f6;
 }
 
 h1 {
-  display: flex;
-justify-content: center;
-align-items: center;       
- height: 10vh;
- width: 10vh;
+text-align: center;
+ min-height: 5vh;
+ min-width: 5vw;
  background-image: url(${Section});
-background-repeat: no-repeat;
-
-
+//background-repeat: no-repeat;
+display: inline-block;
     text-shadow: 4px 4px 0 #f8f2f6;
-    text-align: center;
-    //  border: 2px solid #383838;
+    width: -moz-fit-content;
+  width: fit-content;
+   border: 2px solid #383838;
     // border-radius: 10px 10px;
     // background-color: rgba(180, 153, 180, 0.479);
     padding: 4vh;
@@ -64,7 +76,7 @@ li {
     background-color: #d2a5b1;
     border: 2px solid #383838;
     height: 7vh;
-    width: 12vh;
+    width: 12vw;
     font-size: 1.25em;
     display: none;
 }
@@ -82,6 +94,10 @@ a:visited {
 
 .info-text {
 color: #6f6f79;
+font-size: 2em;
+margin-left: auto;
+border: 1 px solid black;
+float: right;
 }
 
 
@@ -101,13 +117,13 @@ color: #6f6f79;
 
 .content {
     display: flex;
-    flex-direction: column;
+  // flex-wrap: wrap;
+  //  flex-direction: row;
+ //justify-content: center;
+ // align-items: flex-end;
+ border: 10 px outset palevioletred;
 }
-
-
-
-
-`;
+`
 
 export const lightTheme = {
     body: "#d9d4e7",
@@ -118,3 +134,4 @@ export const darkTheme = {
     body: "#68657a",
     text: "#f5ebdd",
 };
+

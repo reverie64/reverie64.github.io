@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faCss3Alt,
@@ -11,29 +13,51 @@ import styled from "styled-components";
 import { faSpaghettiMonsterFlying } from "@fortawesome/free-solid-svg-icons";
 import EmptyIcon from "../images/EmptyIcon.svg";
 
-import Bars from "./Bars";
+import Bars from "./Bars/Bars";
 
-
-
-const StyledUl = styled.ul`
-    display: flex;
-    flex-direction: row;
+const StyledContent = styled.div`
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
 `;
 
-const StyledIcon = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+const StyledBadges = styled.ul`
+    display: inline-block;
+  // margin: 0 auto;
+    border: 1px solid black;
+    min-width: 18vw;
+    min-height: 30vh;
+   // flex-direction: column;
+   // flex-wrap: wrap;
+  //  justify-content: space-around;
+  // align-items: center;
+    border-width: 4px;
+    border-color: #7462a5 #9787c1 #e0e0e0 #cccccc;
+    // top right bottom left
+   // outline: 1px solid #9787c1;
+   // border: 4px outset #9787c1;
+   width: -moz-fit-content;
+  width: fit-content;
+
+`;
+
+const StyledIcon = styled.li`
+
     height: 10vh;
-    width: 10vh;
+    width: 5vw;
     background-image: url(${EmptyIcon});
     background-repeat: no-repeat;
+    padding-right: 10px;
+    border: 4px outset #9787c1;
+ 
+
     .fa {
         height: 8vh;
-        width: 8vh;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        width: 8vw;
+     
+     display: flex;
+ 
     }
 `;
 
@@ -47,47 +71,51 @@ create custom tooltip later
  <span class="tooltiptext">Tooltip text</span>
 currently seeking new guild. </li>
 
-.home-content {
-    display: flex;
-}
+
 
 .home-head-text {
     text-shadow: 4px 4px 0 #f5ebdd;
-}
 
-.home-img {
-    background-color: #858585;
-    width: 150px;
-    height: 150px;
 
-    border: 7px solid #383838;
-    margin-bottom: 2vh;
+    Abilities:
 }
 */
 
-const Home = () => {
+const Home = ( ) => {
+
+ 
+
+    const findLevel = (birthYear ) => {
+        birthYear = 1989;
+        let date = new Date();
+        //let birthday = new Date(birthYear);
+let level = date.getFullYear() - birthYear
+//birthday.getFullYear();
+        return level
+    };
+
     return (
         <main className="container">
+   
+        
+            <StyledContent>
+          
             <h1>Kristin </h1>
-
-            <div className="home-content">
-                <div className="home-img"></div>
-
+            <span className="info-text">character overview</span>
+                <div className="img"></div>
+                <h4> lvl. {findLevel()}</h4>
                 <ul className="overview">
                     <Bars />
-
-                    <p className="info-text">character overview</p>
 
                     <li> class: software developer</li>
                     <li> specialty: front end </li>
                     <li> pronouns she/ her </li>
-
-                    <StyledUl>
-                        Special abilities/ abilities:
-                        <li>
-                            {" "}
+                </ul>
+                
+                <StyledBadges>
+                    
+                        
                             <StyledIcon>
-                                {" "}
                                 <FontAwesomeIcon
                                     icon={faReact}
                                     alt="React"
@@ -95,8 +123,8 @@ const Home = () => {
                                     className="fa"
                                 />
                             </StyledIcon>
-                        </li>
-                        <li>
+                       
+                       
                             <StyledIcon>
                                 <FontAwesomeIcon
                                     icon={faJsSquare}
@@ -104,18 +132,15 @@ const Home = () => {
                                     className="fa"
                                 />
                             </StyledIcon>
-                        </li>
-                        <li>
+                      
+                      
                             <StyledIcon>
                                 <FontAwesomeIcon
                                     icon={faHtml5}
                                     alt="HTML"
                                     className="fa"
-                                />{" "}
-                            </StyledIcon>{" "}
-                        </li>{" "}
-                        <li>
-                            {" "}
+                                />
+                            </StyledIcon>
                             <StyledIcon>
                                 <FontAwesomeIcon
                                     icon={faCss3Alt}
@@ -123,8 +148,6 @@ const Home = () => {
                                     className="fa"
                                 />
                             </StyledIcon>
-                        </li>
-                        <li>
                             <StyledIcon>
                                 <FontAwesomeIcon
                                     icon={faGitSquare}
@@ -132,8 +155,6 @@ const Home = () => {
                                     className="fa"
                                 />
                             </StyledIcon>
-                        </li>
-                        <li>
                             <StyledIcon>
                                 <FontAwesomeIcon
                                     icon={faLinux}
@@ -141,9 +162,6 @@ const Home = () => {
                                     className="fa"
                                 />
                             </StyledIcon>
-                        </li>
-                        <li>
-                            {" "}
                             <StyledIcon>
                                 <FontAwesomeIcon
                                     icon={faSpaghettiMonsterFlying}
@@ -151,11 +169,9 @@ const Home = () => {
                                     className="fa"
                                 />
                             </StyledIcon>
-                        </li>
-                    </StyledUl>
-                </ul>
-            </div>
-            <h4> lvl 32 </h4>
+                    </StyledBadges>
+                </StyledContent>
+           
             <div className="blurb">
                 Conjuring human friendly web apps, simple and clean layouts that
                 are easy to navigate, improved web interactivity, readable code.
