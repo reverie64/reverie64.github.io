@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 export const GlobalStyles = createGlobalStyle`
 
 * {
@@ -85,74 +86,77 @@ height: 30px;
 }
 
 }
+`;
 
+export const InfoText = styled.span`
+  //  color: #6f6f79;
+  color: #525252; 
+    font-size: 2em;
+    margin-left: auto;
+    float: right;
+    display: flex;
+    padding-right: 2vw; 
+`;
 
-
-
-  /*  
-
-margin-left: auto;
-margin-right: auto;
-padding: 2rem;
-display: flex; 
-flex-wrap: wrap;
- min-height: 40rem;
-min-width: 55rem;
-margin-bottom: 2rem; */ 
-
+export const SmInfoText = styled.span`
+  //  color: #6f6f79;
+  color: #525252; 
+    display: flex;
+`;
 
 /*
-  .container {
-    margin-left: auto;
-margin-right: auto;
+const StyledHome = styled.div`
+  justify-content: center;
+
+
+const StyledAboutDiv = styled.div`
+
+
+    justify-content: center;
+   
+ 
+   
+
+   //border: 10px solid purple;
+`;
+
+const StyledProjectDiv = styled.div`
+
+
+    justify-content: space-around;
+
+  
+`;
+
+const StyledContactDiv = styled.div`
+  
+
+
+       justify-content: space-around;
+
+
+`; */
+
+
+
+export const Main = styled.main`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-   min-height: 40rem;
-min-width: 55rem;
-justify-content: flex-start;
-min-height: 60vh;
-min-width: 75vw;
-margin-bottom: 2rem;
-padding: 1vh;
-height: calc(70%);
- /width: calc(80%);
- /flex: 1 1 auto;
-}
+   width: 100%;
+ min-height: 60vh;
+`;
 
-.content {
-    display: flex;
-   flex-wrap: wrap;
- flex-direction: row;
-   /clear: left;
-  /  min-height: 40vh;
-/min-width: 55vw;
-flex: 1 1 auto;
+export const Row = styled.div`
+display: flex;
+border: 3px solid purple;
 width: 100%;
-height: 100%;
-overflow: auto;
-}       
+`
 
+export const Column = styled.div`
+flex: ${(props) => props.size};
+`;
 
-
-.section {
-  /! fix height and size responsive
-         
- /min-height: calc(70%);
-/ min-height: fit-content;
- /min-width: calc(80%);
-
-background-repeat: no-repeat;
-margin-left: auto;
-margin-right: auto;
-padding: 2rem;
-display: flex; 
-/flex-wrap: wrap;
-/ min-height: 40rem;
-/min-width: 55rem;
-margin-bottom: 2rem;
-}
-*/
-//`;
 
 /* "#f5ebdd", linen
      "#d9d4e7",  ??? 

@@ -14,102 +14,60 @@ import { faSpaghettiMonsterFlying } from "@fortawesome/free-solid-svg-icons";
 import EmptyIcon from "../assets/EmptyIcon.svg";
 
 import Bars from "./Bars/Bars";
+import { Main, Row, InfoText, SmInfoText } from "../theme";
 
-/*   
-   
- 
+/*  
    clear: left;
 flex: 1 1 auto;
 overflow: auto;
 */
 
-const StyledHome = styled.div`
-    display: flex;
-    flex-direction: column;
+const TopRow = styled(Row)``;
+
+const MiddleRow = styled(Row)``;
+
+const BottomRow = styled(Row)``;
+
+const StyledHome = styled(Main)`
     justify-content: center;
-    align-items: flex-start;
-   // flex-wrap: wrap; //! keep or no?
-  //  min-width: 80vw;
-  width: 100%;
-min-height: 60vh;
- 
-
-
-
-
-
-    /*
-     display: grid;
-     
-    grid-template-rows: .2fr 1fr 1fr 0.5fr;
-    grid-template-areas:
-        "StyledTop Bars InfoText InfoText"
-        "StyledPl StyledO StyledO StyledO"
-        "Level StyledBadges StyledEnd StyledEnd ";
-    text-align: center;
-    grid-gap: 0.25rem;
-    transition: all 0.25s ease-in-out;
-    @media (max-width: 550px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 0.4fr 2.2fr ;
-        grid-template-areas:
-            "StyledTop"
-            "Bars"
-            "InfoText"
-            "StyledPl"
-            "Level"
-            "StyledO"
-            "StyledBadges"
-            "StyledEnd";
-    }*/
 `;
 
 const StyledTop = styled.div`
     text-shadow: 4px 4px 0 #f8f2f6;
     font-size: 3.5rem;
     font-weight: bold;
-    
 `;
-
-const InfoText = styled.div`
-  //  color: #6f6f79;
-  color: #525252; 
-    font-size: 2em;
-    margin-left: auto;
-    float: right;
-    display: flex;
-`;
-
-const SmInfoText = styled.div`
-  //  color: #6f6f79;
-  color: #525252; 
-    display: flex;
-`;
-
 
 //! for image placeholder
 const StyledPl = styled.div`
     display: flex;
     width: 150px;
     height: 150px;
-    border: 2px solid #84A59D;
+    border: 2px solid #84a59d;
     border-radius: 10px 10px;
     background-color: rgba(180, 153, 180, 0.479);
+    .level {
+        display: flex;
+        font-size: 1.75rem;
+        font-weight: bold;
+
+        align-items: flex-end;
+    }
 `;
 
 const StyledO = styled.ul``;
-
+/*
 const Level = styled.div`
     font-size: 1.75rem;
     font-weight: bold;
-`;
+`;*/
 
 const StyledBadges = styled.ul`
     display: flex;
     //border: 1px solid black;
     min-width: 20vw;
     min-height: 20vh;
-    
+
     //flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -120,7 +78,6 @@ const StyledBadges = styled.ul`
     //! make background color something else so it doesnt match tabs ?, corner cut out
     // display: grid;
     //border-collapse: separate;
-    
 `;
 
 const StyledIcon = styled.li`
@@ -137,9 +94,8 @@ const StyledIcon = styled.li`
     display: flex;
     //border-collapse: separate;
     flex-grow: 1;
-    
-    .fa {
 
+    .fa {
         min-height: 3rem;
         min-width: 3rem;
         //    height: 8vh;
@@ -153,9 +109,9 @@ const StyledIcon = styled.li`
 `;
 
 const StyledEnd = styled.div`
-display: flex;
- flex-grow: 1;
- `
+    display: flex;
+    flex-grow: 1;
+`;
 
 /* 
 update hp/mp based on time 120/120 hp | 24/24 mp in am
@@ -181,28 +137,34 @@ currently seeking new guild. </li>
 const Home = () => {
     return (
         <StyledHome>
-            <StyledTop>Kristin </StyledTop>
-            <Bars />
-            <InfoText>character overview</InfoText>
+            <TopRow>
+                <StyledTop>Kristin </StyledTop>
+                <Bars />
+                <InfoText>character overview</InfoText>
+            </TopRow>
+            <MiddleRow>
+                <StyledPl>
+                    {" "}
+                    <span className="level"> lvl. 32 </span>{" "}
+                </StyledPl>
+                <StyledO>
+                    <li>
+                        <span className="sm-info-text">class:</span> software
+                        developer
+                    </li>
+                    <li>
+                        {" "}
+                        <span className="sm-info-text">specialty: </span>front
+                        end{" "}
+                    </li>
+                    <li>
+                        <span className="sm-info-text">pronouns:</span> she/ her{" "}
+                    </li>
+                </StyledO>
+            </MiddleRow>
+            <BottomRow>
+                <SmInfoText>Abilities:</SmInfoText>
 
-            <StyledPl />
-
-            <Level> lvl. 32 </Level>
-
-            <StyledO>
-                <li>
-                    <span className="sm-info-text">class:</span> software
-                    developer
-                </li>
-                <li> <span className="sm-info-text">specialty: </span>front end{" "}
-                </li>
-                <li>
-                    <span className="sm-info-text">pronouns:</span> she/ her{" "}
-                </li>
-            </StyledO>
-
-            <span className="sm-info-text">
-                Abilities:
                 <StyledBadges>
                     <StyledIcon>
                         <FontAwesomeIcon
@@ -257,14 +219,15 @@ const Home = () => {
                         />
                     </StyledIcon>
                 </StyledBadges>
-            </span>
 
-            <StyledEnd>
-             <SmInfoText>strengths:</SmInfoText> 
-                Conjuring human friendly web apps, simple and clean layouts that
-                are easy to navigate, improved web interactivity, readable code.
-                creativity, always learning move some of about here.
-            </StyledEnd>
+                <StyledEnd>
+                    <SmInfoText>strengths:</SmInfoText>
+                    Conjuring human friendly web apps, simple and clean layouts
+                    that are easy to navigate, improved web interactivity,
+                    readable code. creativity, always learning move some of
+                    about here.
+                </StyledEnd>
+            </BottomRow>
         </StyledHome>
     );
 };

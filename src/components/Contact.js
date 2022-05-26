@@ -8,70 +8,33 @@ import { ReactComponent as Github } from "../assets/Github.svg";
 import { ReactComponent as Linkedin } from "../assets/LinkedIn.svg";
 import { ReactComponent as Mail } from "../assets/Mail.svg";
 import Section from "../assets/Section.svg";
+import { Main, Row, InfoText, SmInfoText } from "../theme";
 
+//! unsure about layout
 
-/*   
-
-   <div className="container">
-display: flex;
-   flex-wrap: wrap;
- flex-direction: row;
-   //clear: left;
-  //  min-height: 40vh;
-//min-width: 55vw;
-flex: 1 1 auto;
-width: 100%;
-height: 100%;
-overflow: auto;
-
-
-
-    flex-direction: row;
- 
-
- 
-
-*/
-
-
-const StyledContactDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-      flex-wrap: wrap;
-   width: 100%;
-min-height: 60vh;
+const StyledContactDiv = styled(Main)`
+     //    justify-content: space-around; 
 `;
 
-const InfoText = styled.div`
-  //  color: #6f6f79;
-  color: #525252; 
-    font-size: 2em;
-    margin-left: auto;
-    float: right;
-    display: flex;
-`;
-/*
-const SmInfoText = styled.div`
-  //  color: #6f6f79;
-  color: #525252; 
-    display: flex;
-`;
-*/
+const TopRow = styled(Row)``;
+
+const MiddleRow = styled(Row)``;
+
+const BottomRow = styled(Row)``;
+
 const StyledGithub = styled(Github)`
-  height: 10vh;
+    height: 10vh;
 `;
 
 const StyledLinkedIn = styled(Linkedin)`
     height: 10vh;
 `;
 const StyledMail = styled(Mail)`
-     height: 10vh;
+    height: 10vh;
 `;
 
 const StyledAchv = styled.div`
-      height: 10vh;
+    height: 10vh;
     width: 30vw;
     background-image: url(${Section});
     border: 3px grey outset;
@@ -83,13 +46,10 @@ const StyledAchv = styled.div`
         0 0 4px 1px rgba(0, 0, 0, 0.1), 0 3px 2px rgba(0, 0, 0, 0.2);
     border: 7px outset #e0e0e0;
     //text-align: center;
-   // display: inline-block;
-   display: flex;
-  // flex: 1 1 auto;
-   
+    // display: inline-block;
+    display: flex;
+    // flex: 1 1 auto;
 `;
-
-
 
 const Contact = () => {
     const git = () => window.open("http://github.com/reverie64");
@@ -98,23 +58,30 @@ const Contact = () => {
 
     const mail = () => window.open("mailto: kristinh889@gmail.com");
     return (
-     
-           
-            <StyledContactDiv>
-             <InfoText>How to reach me?</InfoText>
-          
+        <StyledContactDiv>
+            <TopRow>
+                <InfoText>How to reach me?</InfoText>{" "}
+            </TopRow>
+
+            <MiddleRow>
                 visit my
                 <StyledGithub onClick={git} alt="github" className="link" />
                 send me an
                 <StyledMail onClick={mail} alt="email" className="link" />
                 or find me on
-                <StyledLinkedIn onClick={linkedin} alt="linkedin" className="link" />
+                <StyledLinkedIn
+                    onClick={linkedin}
+                    alt="linkedin"
+                    className="link"
+                />
+            </MiddleRow>
+            <BottomRow>
                 questing nearby and want to get coffee? i'll even cross the
                 river. lfg?
-            
+            </BottomRow>
+
             <StyledAchv>Achievement Unlocked Stay awhile and Listen</StyledAchv>
-            </StyledContactDiv>
-   
+        </StyledContactDiv>
     );
 };
 

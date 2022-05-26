@@ -47,16 +47,6 @@ update with empty/ black fill
 
 */
 
-const StyledContainer = styled.div`
-    //display: inline-block;
-
-    display: flex;
-    flex-direction: column;
-   // justify-content: space-around;
- //   align-items: space-around;
- border: 5px solid pink;
-`;
-
 
 const StyledBars = styled.div`
     //display: inline-block;
@@ -69,6 +59,24 @@ const StyledBars = styled.div`
  min-height: 20vh;
  min-width: 15vh;
 `;
+
+const StyledContainer = styled.div`
+    //display: inline-block;
+
+    display: flex;
+    flex-direction: column;
+   // justify-content: space-around;
+ //   align-items: space-around;
+ border: 5px solid pink;
+
+ h4 {
+     letter-spacing: 0.2rem; //! M is hard to read. adjust font.
+ }
+
+`;
+
+
+
 
 const Bars = () => {
     let maxHp = 120;

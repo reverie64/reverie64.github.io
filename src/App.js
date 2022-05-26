@@ -5,12 +5,12 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 
 import { lightTheme, darkTheme, GlobalStyles } from "./theme";
-
-//import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import RouteSwitch from "./components/RouteSwitch";
 
 import ContainerBg from "./assets/ContainerBg.svg";
+//import X from "../assets/X.svg";
+
 
 /*   <div className="container-border">
 
@@ -22,9 +22,6 @@ const StyledCont = styled.div`
     background-image: url(${ContainerBg});
 `;
  <StyledCont>
-
-
-
   backgroundImage: `url(${ContainerBg})`,
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover",
@@ -40,7 +37,22 @@ const StyledCont = styled.div`
                         }}
  */
 
+/*
+const StyledX = styled.div`
+   // background-image: url(${X});
+  //  background-repeat: no-repeat;
+display: flex;
+  //  justify-self: flex-start;
+   align-self: flex-start;
+      height: 5vh;
+    width: 5vw; 
+    background-color: #c0a5c5;
+     //padding-top: -1vh;
+           border: 2px solid black;
+         outline: 5px solid purple;
+           border-radius: 5px;
 
+`*/
 
 
 const StyledWindow = styled.div`  
@@ -55,21 +67,20 @@ max-width: 80vw;
 //margin-right: auto;
 //margin-left: auto;
  min-height: 70vh;
+
 `;
 
 
 
 //! fix height and size responsive
 const StyledCont = styled.div`           
-
 background-image: url(${ContainerBg});
 background-repeat: no-repeat;
 padding: 4vh;
 display: flex; 
  //min-height: 80vh;
 width: 100%;
-//margin-bottom: 2rem;
- //border: 7px solid pink;
+  z-index: -10;
 `;
 
 
@@ -122,18 +133,14 @@ const App = () => {
                  <Navbar />
                     <StyledCont
                     >
-                       
                         <RouteSwitch 
                       //  findLevel={findLevel} 
-
                         />
                     </StyledCont>
-         
                </StyledWindow>
-            
-                
-                <Outlet />
+           
                 </div>
+                <Outlet />
             </>
         </ThemeProvider>
     );

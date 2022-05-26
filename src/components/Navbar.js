@@ -5,27 +5,9 @@ import styled from "styled-components";
 import Logo from "../assets/Logo.svg";
 import Section from "../assets/Section.svg";
 import InactiveSection from "../assets/InactiveSection.svg";
-//import X from "../assets/X.svg";
 
-/*  style={({ isActive }) => ({
-                        background: isActive ? "#c2b7df" : "#d2a5b1",
-                        textDecoration: isActive
-                            ? "underline #c2b7df 50px"
-                            : "underline black",
-                            
-              <NavLink
-                    to="/exp"
-                    style={({ isActive }) => ({
-                        backgroundImage: isActive ?  `url(${ContainerBg})` : `url(${Section})`,
-                        textDecoration: isActive
-                            ? "underline #c2b7df 50px"
-                            : "underline black",
-                    })}
-                 
-                >
-                    <li>exp</li>
-                </NavLink>                   
-                                    */
+
+//! big underline alternative to span lenght of tab - bottom outline? 
 
 const StyledNav = styled.nav`
     min-height: 8vh;
@@ -50,9 +32,10 @@ const StyledUl = styled.ul`
     //  align-items: space-between;
     justify-content: flex-start;
 
-    li {
+    li { 
         display: flex;
         padding: 2.5vh;
+       // min-width: 6vw; //! need to render the same size. this overflows the size of container
     }
 `;
 
@@ -80,6 +63,13 @@ display: flex;
            border: 2px solid black;
          outline: 5px solid purple;
            border-radius: 5px;
+
+
+                   
+                             // color: isActive ? `${(props) => props.theme.//colors.text}` : 'pink',
+
+
+
 `*/
 
 const Navbar = () => {
@@ -93,9 +83,10 @@ const Navbar = () => {
                         backgroundImage: isActive
                             ? `url(${Section})`
                             : `url(${InactiveSection})`,
-                        textDecoration: isActive //!not working after layout change
-                            ? "underline #cedfdc 50px"
+                        textDecoration: isActive 
+                            ? "underline #cedfdc 4vh"
                             : "none",
+                            color: isActive ? "#383838" : '#1f1f1f',
                         // color: isActive ? `${(props) => props.theme.colors.text}` : '#c4a562',
                         // show span ? isActive ? `<span> < go home </span> ` : "none"
                     })}
@@ -109,8 +100,9 @@ const Navbar = () => {
                             ? `url(${Section})`
                             : `url(${InactiveSection})`,
                         textDecoration: isActive
-                            ? "underline #cedfdc 50px"
-                            : "none", // color: isActive ? `${(props) => props.theme.//colors.text}` : 'pink',
+                            ? "underline #cedfdc 4vh"
+                            : "none",
+                            color: isActive ? "#383838" : '#1f1f1f',
                     })}
                 >
                     <li>about</li>
@@ -123,8 +115,9 @@ const Navbar = () => {
                             ? `url(${Section})`
                             : `url(${InactiveSection})`,
                         textDecoration: isActive
-                            ? "underline #cedfdc 50px"
+                            ? "underline #cedfdc 4vh"
                             : "none",
+                            color: isActive ? "#383838" : '#1f1f1f',
                     })}
                 >
                     <li>projects</li>
@@ -136,8 +129,9 @@ const Navbar = () => {
                             ? `url(${Section})`
                             : `url(${InactiveSection})`,
                         textDecoration: isActive
-                            ? "underline #cedfdc 50px"
+                            ? "underline #cedfdc 4vh"
                             : "none",
+                            color: isActive ? "#383838" : '#1f1f1f',
                     })}
                 >
                     <li>contact</li>

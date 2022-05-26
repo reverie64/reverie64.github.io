@@ -1,52 +1,33 @@
 import styled from "styled-components";
+
+import { Main, Row, InfoText, SmInfoText } from "../theme";
+
 /* not sure about:
   character title:
         background for name of blurb? or somewhere here
 faction millennial
-spawn zone amarillo
 stats, skills, talents, exp. level up 
 dislikes: escort quests, choosing color palettes
-   <h1>character bio</h1>
 
-*/
-
-/*     display: flex;
+     display: flex;
    flex-wrap: wrap;
  flex-direction: row;
-   //clear: left;
-  //  min-height: 40vh;
-//min-width: 55vw;
+   clear: left;
 flex: 1 1 auto;
-width: 100%;
-height: 100%;
 overflow: auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-
-
- 
-    flex-direction: row;
-
-  
-
- 
 
 */
 
-const StyledAboutDiv = styled.div`
- display: flex;
-// flex-direction: column;
-  //  align-items: flex-start;
-   // justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-min-height: 60vh;
+const StyledAboutDiv = styled(Main)`
+    // justify-content: center;
+    // border: 10px solid purple;
+`;
 
- // border: 10px solid purple;
-`
+const TopRow = styled(Row)``;
+
+const MiddleRow = styled(Row)``;
+
+const BottomRow = styled(Row)``;
 
 //! for image placeholder
 const StyledPl = styled.div`
@@ -58,28 +39,11 @@ const StyledPl = styled.div`
     background-color: rgba(180, 153, 180, 0.479);
 `;
 
-
-const InfoText = styled.div`
-  //  color: #6f6f79;
-  color: #525252; 
-    font-size: 2em;
-    margin-left: auto;
-    float: right;
-    display: flex;
-`;
-
-const SmInfoText = styled.div`
-  //  color: #6f6f79;
-  color: #525252; 
-    display: flex;
-`;
-
 const About = () => {
     return (
-      <StyledAboutDiv>
-              
-                <StyledPl>image placeholder</StyledPl>
-                    <InfoText>character bio</InfoText>
+        <StyledAboutDiv>
+            <TopRow>
+                <StyledPl>image placeholder</StyledPl>{" "}
                 <ul>
                     <h2>Kristin Harris</h2>
                     character bio/profile/ in depth/stats?
@@ -93,23 +57,27 @@ const About = () => {
                     <li> questing: currently leveling up: </li>
                     <li>interests: anime, video games, hiking, food</li>
                 </ul>
-                
+                <InfoText>character bio</InfoText>
+            </TopRow>
 
-               <InfoText>exp and stats?</InfoText> 
-                <ul> 
-                    recent/pinned achievements:
+            <MiddleRow>
+                <ul>
+                    <SmInfoText> recent/pinned achievements: </SmInfoText>
                     <li> re skilled - change from teacher to tech</li>
                     <li>
                         new campaign unlocked covid- achievement survived two
                         years
                     </li>
                     <li>gain an apprentice. </li>
-                    like many in the
-                    millennial faction, she/i? discovered her talent using the
-                    ancient technologies of xanga and myspace. also something
-                    about mod wii and linux emulators.
+                    like many in the millennial faction, she/i? discovered her
+                    talent using the ancient technologies of xanga and myspace.
+                    also something about mod wii and linux emulators.
                 </ul>
-          <SmInfoText>exp- all skills, tech stacks xp bar</SmInfoText> 
+                <InfoText>exp and stats?</InfoText>
+            </MiddleRow>
+
+            <BottomRow>
+                <SmInfoText>exp- all skills, tech stacks xp bar</SmInfoText>
                 <li>
                     needs to level up .... skills to unlock the talent tree/spec
                     "fullstack" -
@@ -119,18 +87,18 @@ const About = () => {
                 </li>
                 talent tree? to full stack spec. skills //change education -
                 degrees
-         
-           <section className="quests">
-                current questline: fullstack future quest lines: nodeJS MongoDB,
-                nextJS side quests: main quest:
-            </section>
-            <section className="ed-content"> 
- <SmInfoText>achievements?</SmInfoText> 
-                undergrad sociology 2014 39 graduate hours with special
-                interest/relevant coursework in diversity and inclusion.
-                responsiblity to continue to quest so web is accessible for all.
-            </section>
-           
+                <section className="quests">
+                    current questline: fullstack future quest lines: nodeJS
+                    MongoDB, nextJS side quests: main quest:
+                </section>
+                <section className="ed-content">
+                    <SmInfoText>achievements?</SmInfoText>
+                    undergrad sociology 2014 39 graduate hours with special
+                    interest/relevant coursework in diversity and inclusion.
+                    responsibility to continue to quest so web is accessible for
+                    all.
+                </section>
+            </BottomRow>
         </StyledAboutDiv>
     );
 };
