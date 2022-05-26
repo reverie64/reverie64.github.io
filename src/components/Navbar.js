@@ -2,92 +2,129 @@ import { NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 
-import Logo from "../images/Logo.svg";
+import Logo from "../assets/Logo.svg";
+import Section from "../assets/Section.svg";
+import InactiveSection from "../assets/InactiveSection.svg";
+//import X from "../assets/X.svg";
+
+/*  style={({ isActive }) => ({
+                        background: isActive ? "#c2b7df" : "#d2a5b1",
+                        textDecoration: isActive
+                            ? "underline #c2b7df 50px"
+                            : "underline black",
+                            
+              <NavLink
+                    to="/exp"
+                    style={({ isActive }) => ({
+                        backgroundImage: isActive ?  `url(${ContainerBg})` : `url(${Section})`,
+                        textDecoration: isActive
+                            ? "underline #c2b7df 50px"
+                            : "underline black",
+                    })}
+                 
+                >
+                    <li>exp</li>
+                </NavLink>                   
+                                    */
 
 const StyledNav = styled.nav`
-    min-height: 10vh;
+    min-height: 8vh;
     display: flex;
-    width: 75%;
-    min-width: 95vh;
-    margin-left: 10%;
-  
+    //  align-items: flex-start;
+    //justify-content: flex-start;
+    width: 100%;
+    font-size: 2rem;
+    //  border: 5px purple solid;
+    /*background-color: #c5c0d8;
+        border: 8px solid #405c76;
+        border-top-right-radius: 10px;
+         border-top-left-radius: 10px;
+        padding-top: 1vh;*/
 `;
 
 const StyledUl = styled.ul`
-  
+    width: 100%;
     display: flex;
-    /*box-shadow: 4px 5px 0px 0px #38383E;
-    background-color: #c2b7df;
-     border-radius: 10px 10px;
-    */
-     
-    
+
+    // border: 5px blue solid;
+    //  align-items: space-between;
+    justify-content: flex-start;
 
     li {
-        margin-right: 2vh;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 10vh;
-        width: 10vw;
-        border-top: 4px solid #38383e;
-        border-left: 4px solid #38383e;
-        border-right: 4px solid #38383e;
-        border-radius: 10px 10px;
-        
+        padding: 2.5vh;
     }
 `;
 
 const StyledLogo = styled.div`
-    height: 10vh;
-    width: 10vw;
+    min-height: 9vh;
+    min-width: 9vw;
     background-image: url(${Logo});
     background-repeat: no-repeat;
+    display: flex;
+    // justify-self: flex-start;
+    // align-self: center;
 `;
+
+/*
+const StyledX = styled.div`
+   // background-image: url(${X});
+  //  background-repeat: no-repeat;
+display: flex;
+  //  justify-self: flex-start;
+   align-self: flex-start;
+      height: 5vh;
+    width: 5vw; 
+    background-color: #c0a5c5;
+     //padding-top: -1vh;
+           border: 2px solid black;
+         outline: 5px solid purple;
+           border-radius: 5px;
+`*/
 
 const Navbar = () => {
     return (
         <StyledNav>
-            <NavLink
-                to="/"
-                style={({ isActive }) => ({
-                    background: isActive ? "#c2b7df" : "#d2a5b1",
-                })}
-            > <StyledLogo />
-            </NavLink>
-
             <StyledUl>
-           
+                <StyledLogo />
+                <NavLink
+                    to="/"
+                    style={({ isActive }) => ({
+                        backgroundImage: isActive
+                            ? `url(${Section})`
+                            : `url(${InactiveSection})`,
+                        textDecoration: isActive //!not working after layout change
+                            ? "underline #cedfdc 50px"
+                            : "none",
+                        // color: isActive ? `${(props) => props.theme.colors.text}` : '#c4a562',
+                        // show span ? isActive ? `<span> < go home </span> ` : "none"
+                    })}
+                >
+                    <li>home</li>
+                </NavLink>
                 <NavLink
                     to="/about"
                     style={({ isActive }) => ({
-                        background: isActive ? "#c2b7df" : "#d2a5b1",
+                        backgroundImage: isActive
+                            ? `url(${Section})`
+                            : `url(${InactiveSection})`,
                         textDecoration: isActive
-                            ? "underline #c2b7df 50px"
-                            : "underline black",
+                            ? "underline #cedfdc 50px"
+                            : "none", // color: isActive ? `${(props) => props.theme.//colors.text}` : 'pink',
                     })}
                 >
-                    <li>about</li> 
+                    <li>about</li>
                 </NavLink>
 
                 <NavLink
-                    to="/exp"
-                    style={({ isActive }) => ({
-                        background: isActive ? "#c2b7df" : "#d2a5b1",
-                        textDecoration: isActive
-                            ? "underline #c2b7df 50px"
-                            : "underline black",
-                    })}
-                >
-                    <li>exp</li>
-                </NavLink>
-                <NavLink
                     to="/projects"
                     style={({ isActive }) => ({
-                        background: isActive ? "#c2b7df" : "#d2a5b1",
+                        backgroundImage: isActive
+                            ? `url(${Section})`
+                            : `url(${InactiveSection})`,
                         textDecoration: isActive
-                            ? "underline #c2b7df 50px"
-                            : "underline black",
+                            ? "underline #cedfdc 50px"
+                            : "none",
                     })}
                 >
                     <li>projects</li>
@@ -95,10 +132,12 @@ const Navbar = () => {
                 <NavLink
                     to="/contact"
                     style={({ isActive }) => ({
-                        background: isActive ? "#c2b7df" : "#d2a5b1",
+                        backgroundImage: isActive
+                            ? `url(${Section})`
+                            : `url(${InactiveSection})`,
                         textDecoration: isActive
-                            ? "underline #c2b7df 50px"
-                            : "underline black",
+                            ? "underline #cedfdc 50px"
+                            : "none",
                     })}
                 >
                     <li>contact</li>

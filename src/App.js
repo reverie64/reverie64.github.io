@@ -6,11 +6,11 @@ import { Outlet } from "react-router-dom";
 
 import { lightTheme, darkTheme, GlobalStyles } from "./theme";
 
-import Footer from "./components/Footer";
+//import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import RouteSwitch from "./components/RouteSwitch";
 
-import ContainerBg from "./images/ContainerBg.svg";
+import ContainerBg from "./assets/ContainerBg.svg";
 
 /*   <div className="container-border">
 
@@ -41,29 +41,45 @@ const StyledCont = styled.div`
  */
 
 
-const StyledCont = styled.div`           
 
-border-radius: 15px;
-   height: calc(80%);
-   width: calc(80%);
-background-image: url(${ContainerBg});
-background-repeat: no-repeat;
-margin-left: auto;
-margin-right: auto;
-padding-left: 5%;
-padding-right: 5%;
-padding-bottom: 5%;
-padding: 5%;
-display: flex; 
-flex-wrap: wrap;
-min-height: 70vh;
-min-width: 65vh;
 
+const StyledWindow = styled.div`  
+//background-color: #c5c0d8;
+  display: flex; 
+ flex-direction: column;
+margin-bottom: 1vh;
+
+//justify-content: center;
+//align-items: center;
+max-width: 80vw;
+//margin-right: auto;
+//margin-left: auto;
+ min-height: 70vh;
 `;
 
 
 
+//! fix height and size responsive
+const StyledCont = styled.div`           
+
+background-image: url(${ContainerBg});
+background-repeat: no-repeat;
+padding: 4vh;
+display: flex; 
+ //min-height: 80vh;
+width: 100%;
+//margin-bottom: 2rem;
+ //border: 7px solid pink;
+`;
+
+
+
+
+
+
+
 const App = () => {
+   // const [level, setLevel] = useState(null);
     const [theme, setTheme] = useState("light");
     const isDarkTheme = theme === "dark";
     const toggleTheme = () => {
@@ -83,9 +99,17 @@ const App = () => {
             setTheme("dark");
         }
     }, []);
-
-
-    
+/*
+        const findLevel = (birthYear) => {
+            birthYear = 1989;
+            let date = new Date();
+            //let birthday = new Date(birthYear);
+            let age = date.getFullYear() - birthYear;
+            //birthday.getFullYear();
+            setLevel(age)
+            return level;
+        };
+    */
 
 
 
@@ -93,28 +117,23 @@ const App = () => {
         <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
             <>
                 <GlobalStyles />
-                <div className="App">
+               <div className="App">
+                <StyledWindow>
                  <Navbar />
                     <StyledCont
                     >
                        
-                        <RouteSwitch />
+                        <RouteSwitch 
+                      //  findLevel={findLevel} 
+
+                        />
                     </StyledCont>
-                    <button onClick={toggleTheme}>
-                        {" "}
-                        {isDarkTheme ? (
-                            <span aria-label="Light mode" role="img">
-                                🌞
-                            </span>
-                        ) : (
-                            <span aria-label="Dark mode" role="img">
-                                🌜
-                            </span>
-                        )}
-                    </button>
-                </div>
-                <Footer />
+         
+               </StyledWindow>
+            
+                
                 <Outlet />
+                </div>
             </>
         </ThemeProvider>
     );

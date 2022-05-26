@@ -10,13 +10,12 @@ import Projects from "./Projects";
 const RouteSwitch = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="exp" element={<Exp />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="projects" element={<Projects />} />
-                <Route path="*" element={<NotFound />} />
-
+            <Route path="/" element={<Home /> }/>
+            <Route path="about" element={<About />} />
+            <Route path="exp" element={<Exp />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     );
 };

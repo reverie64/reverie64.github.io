@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,55 +11,151 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
 import { faSpaghettiMonsterFlying } from "@fortawesome/free-solid-svg-icons";
-import EmptyIcon from "../images/EmptyIcon.svg";
+import EmptyIcon from "../assets/EmptyIcon.svg";
 
 import Bars from "./Bars/Bars";
 
-const StyledContent = styled.div`
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
+/*   
+   
+ 
+   clear: left;
+flex: 1 1 auto;
+overflow: auto;
+*/
+
+const StyledHome = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+   // flex-wrap: wrap; //! keep or no?
+  //  min-width: 80vw;
+  width: 100%;
+min-height: 60vh;
+ 
+
+
+
+
+
+    /*
+     display: grid;
+     
+    grid-template-rows: .2fr 1fr 1fr 0.5fr;
+    grid-template-areas:
+        "StyledTop Bars InfoText InfoText"
+        "StyledPl StyledO StyledO StyledO"
+        "Level StyledBadges StyledEnd StyledEnd ";
+    text-align: center;
+    grid-gap: 0.25rem;
+    transition: all 0.25s ease-in-out;
+    @media (max-width: 550px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr ;
+        grid-template-areas:
+            "StyledTop"
+            "Bars"
+            "InfoText"
+            "StyledPl"
+            "Level"
+            "StyledO"
+            "StyledBadges"
+            "StyledEnd";
+    }*/
+`;
+
+const StyledTop = styled.div`
+    text-shadow: 4px 4px 0 #f8f2f6;
+    font-size: 3.5rem;
+    font-weight: bold;
+    
+`;
+
+const InfoText = styled.div`
+  //  color: #6f6f79;
+  color: #525252; 
+    font-size: 2em;
+    margin-left: auto;
+    float: right;
+    display: flex;
+`;
+
+const SmInfoText = styled.div`
+  //  color: #6f6f79;
+  color: #525252; 
+    display: flex;
 `;
 
 
-const StyledBadges = styled.ul`
-    display: inline-block;
-  // margin: 0 auto;
-    border: 1px solid black;
-    min-width: 18vw;
-    min-height: 30vh;
-   // flex-direction: column;
-   // flex-wrap: wrap;
-  //  justify-content: space-around;
-  // align-items: center;
-    border-width: 4px;
-    border-color: #7462a5 #9787c1 #e0e0e0 #cccccc;
-    // top right bottom left
-   // outline: 1px solid #9787c1;
-   // border: 4px outset #9787c1;
-   width: -moz-fit-content;
-  width: fit-content;
+//! for image placeholder
+const StyledPl = styled.div`
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #84A59D;
+    border-radius: 10px 10px;
+    background-color: rgba(180, 153, 180, 0.479);
+`;
 
+const StyledO = styled.ul``;
+
+const Level = styled.div`
+    font-size: 1.75rem;
+    font-weight: bold;
+`;
+
+const StyledBadges = styled.ul`
+    display: flex;
+    //border: 1px solid black;
+    min-width: 20vw;
+    min-height: 20vh;
+    
+    //flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    border: 7px inset #b1ccc5;
+    background-color: #a9c7c1;
+    outline: 7px solid #548787;
+    //! make background color something else so it doesnt match tabs ?, corner cut out
+    // display: grid;
+    //border-collapse: separate;
+    
 `;
 
 const StyledIcon = styled.li`
-
-    height: 10vh;
-    width: 5vw;
     background-image: url(${EmptyIcon});
     background-repeat: no-repeat;
-    padding-right: 10px;
-    border: 4px outset #9787c1;
- 
-
+    //border: 4px outset #9787c1;
+    // border: 7px groove #9787c1;
+    // border: 7px ridge #e0e0e0;
+    //border: 5px outset #3471ad;
+    min-height: 4rem;
+    min-width: 4rem;
+    //width: -moz-fit-content;
+    // width: fit-content;
+    display: flex;
+    //border-collapse: separate;
+    flex-grow: 1;
+    
     .fa {
-        height: 8vh;
-        width: 8vw;
-     
-     display: flex;
- 
+
+        min-height: 3rem;
+        min-width: 3rem;
+        //    height: 8vh;
+        //  width: 8vw;
+        //display: inline-block;
+        //  text-align: center;
+        width: -moz-fit-content;
+        width: fit-content;
+        color: #383838;
     }
 `;
+
+const StyledEnd = styled.div`
+display: flex;
+ flex-grow: 1;
+ `
 
 /* 
 update hp/mp based on time 120/120 hp | 24/24 mp in am
@@ -71,7 +167,8 @@ create custom tooltip later
  <span class="tooltiptext">Tooltip text</span>
 currently seeking new guild. </li>
 
-
+          <br /> <br /> blurb: what i do, character quote/ summary/ what
+                charc is good at ?
 
 .home-head-text {
     text-shadow: 4px 4px 0 #f5ebdd;
@@ -81,104 +178,94 @@ currently seeking new guild. </li>
 }
 */
 
-const Home = ( ) => {
-
- 
-
-    const findLevel = (birthYear ) => {
-        birthYear = 1989;
-        let date = new Date();
-        //let birthday = new Date(birthYear);
-let level = date.getFullYear() - birthYear
-//birthday.getFullYear();
-        return level
-    };
-
+const Home = () => {
     return (
-        <main className="container">
-   
-        
-            <StyledContent>
-          
-            <h1>Kristin </h1>
-            <span className="info-text">character overview</span>
-                <div className="img"></div>
-                <h4> lvl. {findLevel()}</h4>
-                <ul className="overview">
-                    <Bars />
+        <StyledHome>
+            <StyledTop>Kristin </StyledTop>
+            <Bars />
+            <InfoText>character overview</InfoText>
 
-                    <li> class: software developer</li>
-                    <li> specialty: front end </li>
-                    <li> pronouns she/ her </li>
-                </ul>
-                
+            <StyledPl />
+
+            <Level> lvl. 32 </Level>
+
+            <StyledO>
+                <li>
+                    <span className="sm-info-text">class:</span> software
+                    developer
+                </li>
+                <li> <span className="sm-info-text">specialty: </span>front end{" "}
+                </li>
+                <li>
+                    <span className="sm-info-text">pronouns:</span> she/ her{" "}
+                </li>
+            </StyledO>
+
+            <span className="sm-info-text">
+                Abilities:
                 <StyledBadges>
-                    
-                        
-                            <StyledIcon>
-                                <FontAwesomeIcon
-                                    icon={faReact}
-                                    alt="React"
-                                    title="React"
-                                    className="fa"
-                                />
-                            </StyledIcon>
-                       
-                       
-                            <StyledIcon>
-                                <FontAwesomeIcon
-                                    icon={faJsSquare}
-                                    alt="JavaScript"
-                                    className="fa"
-                                />
-                            </StyledIcon>
-                      
-                      
-                            <StyledIcon>
-                                <FontAwesomeIcon
-                                    icon={faHtml5}
-                                    alt="HTML"
-                                    className="fa"
-                                />
-                            </StyledIcon>
-                            <StyledIcon>
-                                <FontAwesomeIcon
-                                    icon={faCss3Alt}
-                                    alt="CSS"
-                                    className="fa"
-                                />
-                            </StyledIcon>
-                            <StyledIcon>
-                                <FontAwesomeIcon
-                                    icon={faGitSquare}
-                                    alt="Git"
-                                    className="fa"
-                                />
-                            </StyledIcon>
-                            <StyledIcon>
-                                <FontAwesomeIcon
-                                    icon={faLinux}
-                                    alt="Linux"
-                                    className="fa"
-                                />
-                            </StyledIcon>
-                            <StyledIcon>
-                                <FontAwesomeIcon
-                                    icon={faSpaghettiMonsterFlying}
-                                    alt="Styled Components"
-                                    className="fa"
-                                />
-                            </StyledIcon>
-                    </StyledBadges>
-                </StyledContent>
-           
-            <div className="blurb">
+                    <StyledIcon>
+                        <FontAwesomeIcon
+                            icon={faReact}
+                            alt="React"
+                            title="React"
+                            className="fa"
+                        />
+                    </StyledIcon>
+
+                    <StyledIcon>
+                        <FontAwesomeIcon
+                            icon={faJsSquare}
+                            alt="JavaScript"
+                            className="fa"
+                        />
+                    </StyledIcon>
+
+                    <StyledIcon>
+                        <FontAwesomeIcon
+                            icon={faHtml5}
+                            alt="HTML"
+                            className="fa"
+                        />
+                    </StyledIcon>
+                    <StyledIcon>
+                        <FontAwesomeIcon
+                            icon={faCss3Alt}
+                            alt="CSS"
+                            className="fa"
+                        />
+                    </StyledIcon>
+                    <StyledIcon>
+                        <FontAwesomeIcon
+                            icon={faGitSquare}
+                            alt="Git"
+                            className="fa"
+                        />
+                    </StyledIcon>
+                    <StyledIcon>
+                        <FontAwesomeIcon
+                            icon={faLinux}
+                            alt="Linux"
+                            className="fa"
+                        />
+                    </StyledIcon>
+                    <StyledIcon>
+                        <FontAwesomeIcon
+                            icon={faSpaghettiMonsterFlying}
+                            alt="Styled Components"
+                            className="fa"
+                        />
+                    </StyledIcon>
+                </StyledBadges>
+            </span>
+
+            <StyledEnd>
+             <SmInfoText>strengths:</SmInfoText> 
                 Conjuring human friendly web apps, simple and clean layouts that
                 are easy to navigate, improved web interactivity, readable code.
-                <br /> <br /> blurb: what i do, character quote/ summary/ what
-                charc is good at ?
-            </div>
-        </main>
+                creativity, always learning move some of about here.
+            </StyledEnd>
+        </StyledHome>
     );
 };
 

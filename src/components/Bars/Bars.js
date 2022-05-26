@@ -1,20 +1,18 @@
 import styled, { css } from "styled-components";
 //import { ReactComponent as EmptyBar } from "../images/EmptyBar.svg";
-import { ReactComponent as HpBar } from "../Bars/HpBar.svg"
+import { ReactComponent as HpBar } from "../Bars/HpBar.svg";
 import { ReactComponent as MpBar } from "../Bars/MpBar.svg";
 
 const svgStyles = ({ color }) => {
-    return css`
-    `;
+    return css``;
 };
 
- const StyledHpBar = styled(HpBar).attrs(() => ({
+const StyledHpBar = styled(HpBar).attrs(() => ({
     className: "fill",
 }))`
     ${(props) => svgStyles(props)};
     display: flex;
     flex-direction: row;
-
 `;
 
 export const StyledMpBar = styled(MpBar).attrs(() => ({
@@ -23,10 +21,13 @@ export const StyledMpBar = styled(MpBar).attrs(() => ({
     ${(props) => svgStyles(props)};
     display: flex;
     justify-content: flex-start;
-align-items: flex-start;
+    align-items: flex-start;
 `;
 
 /* 
+remove outside container from all but one of the bars.
+
+
 update hp/mp based on time 120/120 hp | 24/24 mp in am
 and level/ xp bar by month? 5000/12000
 (?) with hover that says how was this calculated and explain.
@@ -46,50 +47,61 @@ update with empty/ black fill
 
 */
 
+const StyledContainer = styled.div`
+    //display: inline-block;
+
+    display: flex;
+    flex-direction: column;
+   // justify-content: space-around;
+ //   align-items: space-around;
+ border: 5px solid pink;
+`;
+
+
 const StyledBars = styled.div`
-//display: inline-block;
-  
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: space-around;
+    //display: inline-block;
+
+    display: flex;
+    flex-direction: column;
+   // justify-content: space-around;
+ //   align-items: space-around;
+ border: 1px solid black;
+ min-height: 20vh;
+ min-width: 15vh;
 `;
 
 const Bars = () => {
-    let maxHp = 120;;
+    let maxHp = 120;
     let maxMp = 24;
-   // let currentHp; 
-   // let currentMp;
+    // let currentHp;
+    // let currentMp;
 
-const updateHp = () => {
-    
-    let currentHp = maxHp - 10;
-    return `${currentHp} / ${maxHp}` ;
-}
+    const updateHp = () => {
+        let currentHp = maxHp - 10;
+        return `${currentHp} / ${maxHp}`;
+    };
 
-const updateMp = () => {
-    let currentMp = maxMp - 5;
-    return `${currentMp} / ${maxMp}` 
-}
+    const updateMp = () => {
+        let currentMp = maxMp - 5;
+        return `${currentMp} / ${maxMp}`;
+    };
+
+/*
+setInterval(), set state , Date.now(), num 
+*/
+
+
+
     return (
         <StyledBars>
-            <div>
-                {" "}
-                <h4>HP: </h4> <StyledHpBar />{" "}
-                <span>
-                    {" "}
-                    {updateHp()}
-                </span>{" "}
-            </div>
-
-            <div>
-                {" "}
-                <h4>MP: </h4> <StyledMpBar />{" "}
-                <span>
-                    {" "}
-                    {updateMp()}
-                </span>
-            </div>
+        <StyledContainer> 
+                <h4>HP: </h4> <StyledHpBar /> {updateHp()}
+        </StyledContainer>
+          
+      <StyledContainer>
+             <h4>MP: </h4> <StyledMpBar /> <span> {updateMp()}</span>
+      </StyledContainer>
+        
         </StyledBars>
     );
 };

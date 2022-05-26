@@ -1,47 +1,94 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+//import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import styled from "styled-components";
 
-import { ReactComponent as Github } from "../images/Github.svg"
+import { ReactComponent as Github } from "../assets/Github.svg";
+import { ReactComponent as Linkedin } from "../assets/LinkedIn.svg";
+import { ReactComponent as Mail } from "../assets/Mail.svg";
+import Section from "../assets/Section.svg";
+
+
+/*   
+
+   <div className="container">
+display: flex;
+   flex-wrap: wrap;
+ flex-direction: row;
+   //clear: left;
+  //  min-height: 40vh;
+//min-width: 55vw;
+flex: 1 1 auto;
+width: 100%;
+height: 100%;
+overflow: auto;
 
 
 
-/* .contact-content {
+    flex-direction: row;
+ 
+
+ 
+
+*/
+
+
+const StyledContactDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}*/ 
-
-const StyledAchv = styled.div`
-height: 75px;
-width: 250px;
-background-color: brown;
-border: 3px grey outset;
-box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.5),
-    0 2px 2px rgba(0,0,0,0.3),
-    0 0 4px 1px rgba(0,0,0,0.2),
-    inset 0 3px 2px rgba(255,255,255,.22), 
-    inset 0 -3px 2px rgba(0,0,0,.15), 
-    inset 0 20px 10px rgba(255,255,255,.12), 
-    0 0 4px 1px rgba(0,0,0,.1), 
-    0 3px 2px rgba(0,0,0,.2);
+    justify-content: center;
+      flex-wrap: wrap;
+   width: 100%;
+min-height: 60vh;
 `;
 
+const InfoText = styled.div`
+  //  color: #6f6f79;
+  color: #525252; 
+    font-size: 2em;
+    margin-left: auto;
+    float: right;
+    display: flex;
+`;
+/*
+const SmInfoText = styled.div`
+  //  color: #6f6f79;
+  color: #525252; 
+    display: flex;
+`;
+*/
+const StyledGithub = styled(Github)`
+  height: 10vh;
+`;
 
+const StyledLinkedIn = styled(Linkedin)`
+    height: 10vh;
+`;
+const StyledMail = styled(Mail)`
+     height: 10vh;
+`;
 
-export const StayListen = () => {
+const StyledAchv = styled.div`
+      height: 10vh;
+    width: 30vw;
+    background-image: url(${Section});
+    border: 3px grey outset;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        0 2px 2px rgba(0, 0, 0, 0.3), 0 0 4px 1px rgba(0, 0, 0, 0.2),
+        inset 0 3px 2px rgba(255, 255, 255, 0.22),
+        inset 0 -3px 2px rgba(0, 0, 0, 0.15),
+        inset 0 20px 10px rgba(255, 255, 255, 0.12),
+        0 0 4px 1px rgba(0, 0, 0, 0.1), 0 3px 2px rgba(0, 0, 0, 0.2);
+    border: 7px outset #e0e0e0;
+    //text-align: center;
+   // display: inline-block;
+   display: flex;
+  // flex: 1 1 auto;
+   
+`;
 
-return (
-   <StyledAchv>
-   achievement Unlocked
-       Stay a hile and Listen
-   </StyledAchv>
-)
-
-};
 
 
 const Contact = () => {
@@ -51,42 +98,23 @@ const Contact = () => {
 
     const mail = () => window.open("mailto: kristinh889@gmail.com");
     return (
-        
-        <div className="container">
-            <h1 >How to reach me</h1>
-            <p className="info-text">title?</p>
-            <div className="contact-content"> 
-
-            <Github />
-
-
-            visit my
-            <FontAwesomeIcon
-                icon={faGithub}
-                onClick={git}
-                alt="github"
-                className="link"
-            />
-            send me an
-            <FontAwesomeIcon
-                icon={faEnvelope}
-                onClick={mail}
-                alt="email"
-                className="link"
-            /> 
-            or find me on
-            <FontAwesomeIcon
-                icon={faLinkedin}
-                onClick={linkedin}
-                alt="linkedin"
-                className="link"
-            />
-            questing nearby and want to get coffee? i'll even cross the river.
-            lfg?
-            </div>
-  <StayListen />
-        </div>
-       
+     
+           
+            <StyledContactDiv>
+             <InfoText>How to reach me?</InfoText>
+          
+                visit my
+                <StyledGithub onClick={git} alt="github" className="link" />
+                send me an
+                <StyledMail onClick={mail} alt="email" className="link" />
+                or find me on
+                <StyledLinkedIn onClick={linkedin} alt="linkedin" className="link" />
+                questing nearby and want to get coffee? i'll even cross the
+                river. lfg?
+            
+            <StyledAchv>Achievement Unlocked Stay awhile and Listen</StyledAchv>
+            </StyledContactDiv>
+   
     );
 };
 
