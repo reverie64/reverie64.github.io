@@ -31,20 +31,20 @@ li {
   list-style: none;
 }
 
-.link:hover {
-    cursor: pointer;
-}
-
 a {
     text-decoration: none;
-}
-a:link {
-    color: black;
-}
-a:visited {
+
+    &:link {
     color: black;
 }
 
+&:visited {
+    color: black;
+}
+&:hover { //! not working
+    cursor: pointer;
+}
+}
 
     ::-webkit-scrollbar {
     width: 25px;
@@ -86,77 +86,43 @@ height: 30px;
 }
 
 }
+
 `;
 
 export const InfoText = styled.span`
-  //  color: #6f6f79;
-  color: #525252; 
+    //  color: #6f6f79;
+    color: #525252;
     font-size: 2em;
     margin-left: auto;
     float: right;
     display: flex;
-    padding-right: 2vw; 
+    padding-right: 2vw;
 `;
 
 export const SmInfoText = styled.span`
-  //  color: #6f6f79;
-  color: #525252; 
+    //  color: #6f6f79;
+    color: #525252;
     display: flex;
+    font-size: 1.8rem;
 `;
-
-/*
-const StyledHome = styled.div`
-  justify-content: center;
-
-
-const StyledAboutDiv = styled.div`
-
-
-    justify-content: center;
-   
- 
-   
-
-   //border: 10px solid purple;
-`;
-
-const StyledProjectDiv = styled.div`
-
-
-    justify-content: space-around;
-
-  
-`;
-
-const StyledContactDiv = styled.div`
-  
-
-
-       justify-content: space-around;
-
-
-`; */
-
-
 
 export const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-   width: 100%;
- min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 60vh;
 `;
 
 export const Row = styled.div`
-display: flex;
-border: 3px solid purple;
-width: 100%;
-`
-
-export const Column = styled.div`
-flex: ${(props) => props.size};
+    display: flex;
+    //border: 3px solid purple;
+    width: 100%;
 `;
 
+export const Column = styled.div`
+    flex: ${(props) => props.size};
+`;
 
 /* "#f5ebdd", linen
      "#d9d4e7",  ??? 

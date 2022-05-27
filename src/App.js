@@ -72,13 +72,20 @@ max-width: 80vw;
 
 
 
-//! fix height and size responsive
+//! fix height and size responsive- horizontal min for big 
 const StyledCont = styled.div`           
-background-image: url(${ContainerBg});
-background-repeat: no-repeat;
-padding: 4vh;
+//background-image: url(${ContainerBg});
+//background-repeat: no-repeat;
+
+border: 50px solid;
+  border-image-source: url(${ContainerBg} ) ;
+// border-style: inset;
+  border-image-slice: 50;
+  background-color: #cedfdc; 
+//padding: 4vh;
 display: flex; 
  //min-height: 80vh;
+ border-radius: 15px;
 width: 100%;
   z-index: -10;
 `;

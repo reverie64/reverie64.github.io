@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledFooter = styled.footer`
+const StyledFooter = styled.footer` 
     bottom: 0;
     width: 100%;
     position: relative;
@@ -8,13 +8,13 @@ const StyledFooter = styled.footer`
     text-align: center;
     //justify-content: center;
     font-size: 0.9em;
-    color: #858585;
+    color: #525252 !important;
     margin-top: 1vh;
     a:link {
-        color: #858585;
+        color: #525252 !important; //! need to have as prop in theme style instead
     }
     a:visited {
-        color: #858585;
+        color: #525252 !important;
     }
 `;
 
@@ -22,15 +22,14 @@ const Footer = () => {
     // change icon to wand or something?
 
     return (
-        <StyledFooter>
-            <a
-                href="https://github.com/reverie64/"
-                target="_blank"
-                rel="noreferrer"
-            >
-                {" "}
-                🖌 by Kristin Harris{" "}
-            </a>
+        <StyledFooter
+            as="a"
+            href="https://github.com/reverie64/"
+            target="_blank"
+            rel="noreferrer"
+        >
+            {" "}
+            🖌 by Kristin Harris{" "}
         </StyledFooter>
     );
 };

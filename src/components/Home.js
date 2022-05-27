@@ -1,4 +1,14 @@
 //import { useState } from "react";
+//! container should be same size for each page
+//! check on responsiveness - need media q's?, text size nneds to adapt
+//! finalize color
+//! finalize svgs : color, optimize
+//! check out pixel borders with css
+//! finalize text 
+//! keep on gh pages or change ? change back to hashrouter if keeping.
+// deploy ... profit (:
+
+
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,22 +27,27 @@ import Bars from "./Bars/Bars";
 import { Main, Row, InfoText, SmInfoText } from "../theme";
 
 /*  
-   clear: left;
 flex: 1 1 auto;
 overflow: auto;
 */
 
-const TopRow = styled(Row)``;
+const TopRow = styled(Row)`
+display: flex;
+//justify-content: space-around;
+align-items: flex-start;
+`;
 
 const MiddleRow = styled(Row)``;
 
-const BottomRow = styled(Row)``;
+const BottomRow = styled(Row)`
 
-const StyledHome = styled(Main)`
-    justify-content: center;
 `;
 
-const StyledTop = styled.div`
+const StyledHome = styled(Main)`
+    justify-content: flex-start;
+`;
+
+const StyledName = styled.div`
     text-shadow: 4px 4px 0 #f8f2f6;
     font-size: 3.5rem;
     font-weight: bold;
@@ -53,6 +68,7 @@ const StyledPl = styled.div`
 
         align-items: flex-end;
     }
+    
 `;
 
 const StyledO = styled.ul``;
@@ -67,14 +83,12 @@ const StyledBadges = styled.ul`
     //border: 1px solid black;
     min-width: 20vw;
     min-height: 20vh;
-
-    //flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: space-between;
-    border: 7px inset #b1ccc5;
-    background-color: #a9c7c1;
-    outline: 7px solid #548787;
+   // justify-content: space-around;
+    //align-items: space-around;
+    border: 7px inset #dae7e4;
+    background-color: #c1d7d3;
+   // outline: 7px solid #548787;
     //! make background color something else so it doesnt match tabs ?, corner cut out
     // display: grid;
     //border-collapse: separate;
@@ -138,27 +152,23 @@ const Home = () => {
     return (
         <StyledHome>
             <TopRow>
-                <StyledTop>Kristin </StyledTop>
+                <StyledName>Kristin </StyledName>
                 <Bars />
                 <InfoText>character overview</InfoText>
             </TopRow>
             <MiddleRow>
                 <StyledPl>
                     {" "}
-                    <span className="level"> lvl. 32 </span>{" "}
+                    <span className="level"> lvl. 32 </span>
                 </StyledPl>
                 <StyledO>
-                    <li>
-                        <span className="sm-info-text">class:</span> software
-                        developer
+                    <li> <SmInfoText>class:</SmInfoText>
+                        software developer
                     </li>
-                    <li>
-                        {" "}
-                        <span className="sm-info-text">specialty: </span>front
-                        end{" "}
+                    <li><SmInfoText>specialty:</SmInfoText>front
+                        end
                     </li>
-                    <li>
-                        <span className="sm-info-text">pronouns:</span> she/ her{" "}
+                    <li> <SmInfoText>pronouns:</SmInfoText>she/ her
                     </li>
                 </StyledO>
             </MiddleRow>

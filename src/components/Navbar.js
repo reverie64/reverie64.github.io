@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink as NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -6,16 +6,16 @@ import Logo from "../assets/Logo.svg";
 import Section from "../assets/Section.svg";
 import InactiveSection from "../assets/InactiveSection.svg";
 
-
-//! big underline alternative to span lenght of tab - bottom outline? 
+//! big underline alternative to span lenght of tab - bottom outline?
 
 const StyledNav = styled.nav`
     min-height: 8vh;
     display: flex;
-    //  align-items: flex-start;
+
     //justify-content: flex-start;
     width: 100%;
     font-size: 2rem;
+         align-items: flex-start;
     //  border: 5px purple solid;
     /*background-color: #c5c0d8;
         border: 8px solid #405c76;
@@ -24,22 +24,34 @@ const StyledNav = styled.nav`
         padding-top: 1vh;*/
 `;
 
-const StyledUl = styled.ul`
+const StyledUl = styled.ul` 
     width: 100%;
     display: flex;
+//padding-right: 2vw;
+ //   border: 5px blue solid;
 
-    // border: 5px blue solid;
-    //  align-items: space-between;
-    justify-content: flex-start;
+    //justify-content: flex-start;
+         align-items: center;
 
-    li { 
+    .navlink {  //! thinkness changes per each link lenght -- fix 
         display: flex;
-        padding: 2.5vh;
-       // min-width: 6vw; //! need to render the same size. this overflows the size of container
+        border: 20px solid;
+        border-image-slice: 20;
+        border-radius: 15px;
+   //  text-decoration-width: 50px;
+        
+        
+        //  border-image-source: url(${Section} ) ;
+    }
+
+    li {
+        display: flex;
+    //    padding-left: 1.5vh;
+      //  padding-right: 1.5vh;
     }
 `;
 
-const StyledLogo = styled.div`
+const StyledLogo = styled.div` //! length expands too much with larger screen
     min-height: 9vh;
     min-width: 9vw;
     background-image: url(${Logo});
@@ -47,30 +59,18 @@ const StyledLogo = styled.div`
     display: flex;
     // justify-self: flex-start;
     // align-self: center;
+         // border: 5px purple solid;
 `;
 
-/*
-const StyledX = styled.div`
-   // background-image: url(${X});
-  //  background-repeat: no-repeat;
-display: flex;
-  //  justify-self: flex-start;
-   align-self: flex-start;
-      height: 5vh;
-    width: 5vw; 
-    background-color: #c0a5c5;
-     //padding-top: -1vh;
-           border: 2px solid black;
-         outline: 5px solid purple;
-           border-radius: 5px;
+/*              
+  color: isActive ? `${(props) => props.theme.//colors.text}` : 'pink',
 
 
-                   
-                             // color: isActive ? `${(props) => props.theme.//colors.text}` : 'pink',
-
+`;
 
 
 `*/
+//! change highlight on active to different color
 
 const Navbar = () => {
     return (
@@ -80,30 +80,44 @@ const Navbar = () => {
                 <NavLink
                     to="/"
                     style={({ isActive }) => ({
-                        backgroundImage: isActive
+                        borderImageSource: isActive
                             ? `url(${Section})`
                             : `url(${InactiveSection})`,
-                        textDecoration: isActive 
+                        backgroundColor: isActive ? "#cedfdc" : "#a9c7c1",
+                        textDecoration: isActive
                             ? "underline #cedfdc 4vh"
                             : "none",
-                            color: isActive ? "#383838" : '#1f1f1f',
+                  //! fix               textDecorationWidth: isActive ? "100%" : "none",
+                                  
+                        color: isActive ? "#383838" : "#1f1f1f", 
+
                         // color: isActive ? `${(props) => props.theme.colors.text}` : '#c4a562',
                         // show span ? isActive ? `<span> < go home </span> ` : "none"
                     })}
+                    className="navlink"
                 >
                     <li>home</li>
                 </NavLink>
                 <NavLink
                     to="/about"
                     style={({ isActive }) => ({
-                        backgroundImage: isActive
+                        borderImageSource: isActive
                             ? `url(${Section})`
                             : `url(${InactiveSection})`,
+                        backgroundColor: isActive ? "#cedfdc" : "#a9c7c1",
                         textDecoration: isActive
                             ? "underline #cedfdc 4vh"
                             : "none",
-                            color: isActive ? "#383838" : '#1f1f1f',
+                        color: isActive ? "#383838" : "#1f1f1f",
+                        /*
+                          backgroundColor: isActive ? "#cedfdc" : "#a9c7c1",
+                        backgroundImage: isActive
+                            ? `url(${Section})`
+                            : `url(${InactiveSection})`,
+                     
+                        */
                     })}
+                    className="navlink"
                 >
                     <li>about</li>
                 </NavLink>
@@ -111,28 +125,32 @@ const Navbar = () => {
                 <NavLink
                     to="/projects"
                     style={({ isActive }) => ({
-                        backgroundImage: isActive
+                        borderImageSource: isActive
                             ? `url(${Section})`
                             : `url(${InactiveSection})`,
+                        backgroundColor: isActive ? "#cedfdc" : "#a9c7c1",
                         textDecoration: isActive
                             ? "underline #cedfdc 4vh"
                             : "none",
-                            color: isActive ? "#383838" : '#1f1f1f',
+                        color: isActive ? "#383838" : "#1f1f1f",
                     })}
+                    className="navlink"
                 >
                     <li>projects</li>
                 </NavLink>
                 <NavLink
                     to="/contact"
                     style={({ isActive }) => ({
-                        backgroundImage: isActive
+                        borderImageSource: isActive
                             ? `url(${Section})`
                             : `url(${InactiveSection})`,
+                        backgroundColor: isActive ? "#cedfdc" : "#a9c7c1",
                         textDecoration: isActive
                             ? "underline #cedfdc 4vh"
                             : "none",
-                            color: isActive ? "#383838" : '#1f1f1f',
+                        color: isActive ? "#383838" : "#1f1f1f",
                     })}
+                    className="navlink"
                 >
                     <li>contact</li>
                 </NavLink>

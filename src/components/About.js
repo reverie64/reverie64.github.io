@@ -43,12 +43,12 @@ const About = () => {
     return (
         <StyledAboutDiv>
             <TopRow>
-                <StyledPl>image placeholder</StyledPl>{" "}
+                <StyledPl>image placeholder</StyledPl>
                 <ul>
                     <h2>Kristin Harris</h2>
                     character bio/profile/ in depth/stats?
-                    <li> lvl 32</li>
-                    <li>software developer mage</li>
+                    <li> Level 32 Human Software Developer</li>
+                  
                     <li> town: austin - think of diff name </li>
                     <li>zone: texas hostile- red text </li>
                     <li> spawn area: amarillo</li>

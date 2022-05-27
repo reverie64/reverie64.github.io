@@ -12,7 +12,7 @@ const StyledHpBar = styled(HpBar).attrs(() => ({
 }))`
     ${(props) => svgStyles(props)};
     display: flex;
-    flex-direction: row;
+
 `;
 
 export const StyledMpBar = styled(MpBar).attrs(() => ({
@@ -20,8 +20,6 @@ export const StyledMpBar = styled(MpBar).attrs(() => ({
 }))`
     ${(props) => svgStyles(props)};
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
 `;
 
 /* 
@@ -45,30 +43,37 @@ for each decrease, remove colored fill.
 update with empty/ black fill 
 
 
+<!--
+import * as React from "react"
+
+const HpBar = (props) => (
+  <svg> </svg>
+  )
+export default HpBar
+-->
+<!-- fill{...props}  --> 
+
 */
 
 
 const StyledBars = styled.div`
-    //display: inline-block;
-
     display: flex;
     flex-direction: column;
    // justify-content: space-around;
  //   align-items: space-around;
- border: 1px solid black;
- min-height: 20vh;
- min-width: 15vh;
+ //border: 1px solid black;
+// min-height: 20vh;
+ //min-width: 15vh;
 `;
 
 const StyledContainer = styled.div`
-    //display: inline-block;
-
-    display: flex;
-    flex-direction: column;
-   // justify-content: space-around;
- //   align-items: space-around;
- border: 5px solid pink;
-
+   display: flex;
+ 
+    justify-content: space-between;
+    align-items: center;
+// border: 5px solid pink;
+ min-height: 6.5vh;
+min-width: 30vh;
  h4 {
      letter-spacing: 0.2rem; //! M is hard to read. adjust font.
  }
@@ -96,6 +101,8 @@ const Bars = () => {
 
 /*
 setInterval(), set state , Date.now(), num 
+replace class fill over the course of the daytime hours with black, 
+reverse it at night
 */
 
 
