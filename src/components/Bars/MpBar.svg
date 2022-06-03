@@ -10,11 +10,9 @@
 <path stroke="#666666" d="M6 2h33M1 7h1M4 7h1M10 7h29M42 7h1M2 8h1M41 8h1" />
 <path stroke="#b8b8b8" d="M1 5h1M1 6h1M12 8h3M34 8h1M37 8h3" />
 
-<!-- fill- light to dark -->
-<path stroke="#7fa0da" d="M5 4h34" />
+<!-- fill- light to dark old light blue: 7fa0da  -->
+<path stroke="#7196d6" d="M5 4h34" />
 <path stroke="#5b7cbd" d="M4 3h36M4 4h1M39 4h1M8 5h29" />
 <path stroke="#4767ad" d="M3 4h1M40 4h1M3 5h5M37 5h4" />
 <path stroke="#32529c" d="M4 6h36" />
 </svg>
-
-

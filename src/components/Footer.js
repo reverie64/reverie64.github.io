@@ -4,9 +4,11 @@ const StyledFooter = styled.footer`
     bottom: 0;
     width: 100%;
     position: relative;
-    display: inline-block;
+  //  display: inline-block;
+  display: flex;
     text-align: center;
-    //justify-content: center;
+    justify-content: center;
+    align-items: flex-end;
     font-size: 0.9em;
     color: #525252 !important;
     margin-top: 1vh;

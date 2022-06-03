@@ -1,6 +1,4 @@
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-//import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -10,19 +8,32 @@ import { ReactComponent as Mail } from "../assets/Mail.svg";
 
 import { Main, Row, InfoText, SmInfoText } from "../theme";
 
-//! unsure about layout, links arent working
+//! unsure about layout and style, links arent working when importing as react components. change to img for now.
 
 const StyledContactDiv = styled(Main)`
-     //    justify-content: space-around; 
+    //    justify-content: space-around;
+     // border: 7px solid pink;
 `;
 
-const TopRow = styled(Row)``;
+const TopRow = styled(Row)`
+    align-items: flex-start;
+`;
 
 const MiddleRow = styled(Row)`
+    align-items: flex-start;
+    flex-direction: column;
 `;
 
 const BottomRow = styled(Row)`
+    align-items: flex-end;
+`;
 
+const Compartment = styled.div`
+  //  border: 7px inset #dae7e4;
+ //   background-color: #b5cfca;
+//    outline: 5px inset #dae7e4;
+    width: 100%;
+    // align-items: space-between;
 `;
 
 const StyledGithub = styled(Github)`
@@ -36,17 +47,26 @@ const StyledMail = styled(Mail)`
     height: 10vh;
 `;
 
+/*         <StyledFooter
+            as="a"
+            href="https://github.com/reverie64/"
+            target="_blank"
+            rel="noreferrer"
+        >
+            text
+        </StyledFooter>
+         alt="github" 
+        
+      
+   
 
-
+{mail} alt="email" 
+    alt="linkedin"
+        */
 
 const Contact = () => {
-    const git = () => window.open("http://github.com/reverie64");
-    const linkedin = () =>
-        window.open("http://linkedin.com/in/kristinharris64");
 
-    const mail = () => window.open("mailto: kristinh889@gmail.com");
 
-    
     return (
         <StyledContactDiv>
             <TopRow>
@@ -54,24 +74,40 @@ const Contact = () => {
             </TopRow>
 
             <MiddleRow>
-            
-                visit my
-                <StyledGithub onClick={git} alt="github"  />
-                send me an
-                <StyledMail onClick={mail} alt="email" className="link" />
-                or find me on
-                <StyledLinkedIn
-                    onClick={linkedin}
-                    alt="linkedin"
-                    className="link"
-                />
+
+
+                <Compartment>
+                    visit my
+                    <StyledGithub
+                        onClick={(e) => window.open("http://github.com/reverie64", '_blank')
+                        }
+                    />
+                </Compartment>
+
+                <Compartment>
+                    send me an
+                    <StyledMail
+                        onClick={(e) =>  window.open("mailto: kristinh889@gmail.com")
+                          
+                        }
+                    />
+                </Compartment>
+
+                <Compartment>
+                    {" "}
+                    or find me on
+                    <StyledLinkedIn
+                        onClick={(e) => 
+        window.open("http://linkedin.com/in/kristinharris64")
+                           
+                        }
+                    />
+                </Compartment>
             </MiddleRow>
             <BottomRow>
                 questing nearby and want to get coffee? i'll even cross the
                 river. lfg?
             </BottomRow>
-
-      
         </StyledContactDiv>
     );
 };

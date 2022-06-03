@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import About from "./About";
 import Exp from "./Exp";
 import Contact from "./Contact";
-import Home from "./Home";
+import Home from "./Home/Home";
 import NotFound from "./NotFound";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 
 const RouteSwitch = () => {
     return (

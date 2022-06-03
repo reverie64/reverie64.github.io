@@ -5,6 +5,6 @@
   <path stroke="#405f77" d="M1 1h1m37 0h1M3 2h35M2 3h2m33 0h2M2 4h1m35 0h1M2 5h1m35 0h1M2 6h1m35 0h1M2 7h1m35 0h1M2 8h1m35 0h1M2 9h1m35 0h1M2 10h1m35 0h1M2 11h1m35 0h1M2 12h1m35 0h1M2 13h1m35 0h1M2 14h1m35 0h1M1 15h3m33 0h3M2 16h1m35 0h1"/>
 <!-- light/ middle -->
   <path stroke="#4f7592" d="M2 1h37M1 2h2m35 0h2M1 3h1m37 0h1M1 4h1m37 0h1M1 5h1m37 0h1M1 6h1m37 0h1M1 7h1m37 0h1M1 8h1m37 0h1M1 9h1m37 0h1M1 10h1m37 0h1M1 11h1m37 0h1M1 12h1m37 0h1M1 13h1m37 0h1M1 14h1m37 0h1M1 16h1m1 0h1m33 0h1m1 0h1"/>
-  <!-- highlight -->
-  <path stroke="#c4a562" d="M4 3h33M3 4h3m29 0h3M3 5h2m31 0h2M3 6h1m33 0h1M3 7h1m33 0h1M3 8h1m33 0h1M3 9h1m33 0h1M3 10h1m33 0h1M3 11h1m33 0h1M3 12h1m33 0h1M3 13h1m33 0h1"/>
+  <!-- highlight c7c1a9 or bec7a9-->
+  <path stroke="#bec7a9" d="M4 3h33M3 4h3m29 0h3M3 5h2m31 0h2M3 6h1m33 0h1M3 7h1m33 0h1M3 8h1m33 0h1M3 9h1m33 0h1M3 10h1m33 0h1M3 11h1m33 0h1M3 12h1m33 0h1M3 13h1m33 0h1"/>
 </svg>

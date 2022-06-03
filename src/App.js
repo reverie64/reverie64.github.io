@@ -9,17 +9,14 @@ import Navbar from "./components/Navbar";
 import RouteSwitch from "./components/RouteSwitch";
 
 import ContainerBg from "./assets/ContainerBg.svg";
-//import X from "../assets/X.svg";
-
-
-/*   <div className="container-border">
-
-*/
+//import Cursor from "./assets/Cursor.svg"
 
 /*
 import { ReactComponent as ContainerBg } from "./ContainerBg.svg";
+   style={{cursor: `url(${Cursor}),  auto`}}
 const StyledCont = styled.div`
     background-image: url(${ContainerBg});
+
 `;
  <StyledCont>
   backgroundImage: `url(${ContainerBg})`,
@@ -37,23 +34,6 @@ const StyledCont = styled.div`
                         }}
  */
 
-/*
-const StyledX = styled.div`
-   // background-image: url(${X});
-  //  background-repeat: no-repeat;
-display: flex;
-  //  justify-self: flex-start;
-   align-self: flex-start;
-      height: 5vh;
-    width: 5vw; 
-    background-color: #c0a5c5;
-     //padding-top: -1vh;
-           border: 2px solid black;
-         outline: 5px solid purple;
-           border-radius: 5px;
-
-`*/
-
 
 const StyledWindow = styled.div`  
 //background-color: #c5c0d8;
@@ -67,17 +47,18 @@ max-width: 80vw;
 //margin-right: auto;
 //margin-left: auto;
  min-height: 70vh;
-
+ 
+//border-shadow: slightly darker than background 1-3 px
 `;
 
 
 
-//! fix height and size responsive- horizontal min for big 
+//! fix height and size responsive BUT SHOULD REMAIN SAME FOR EACH TAB- horizontal min for big 
 const StyledCont = styled.div`           
 //background-image: url(${ContainerBg});
 //background-repeat: no-repeat;
 
-border: 50px solid;
+border: 50px solid; //! fix x - stretches
   border-image-source: url(${ContainerBg} ) ;
 // border-style: inset;
   border-image-slice: 50;
@@ -85,6 +66,7 @@ border: 50px solid;
 //padding: 4vh;
 display: flex; 
  //min-height: 80vh;
+// max-width: 70vw; //! big res screen
  border-radius: 15px;
 width: 100%;
   z-index: -10;
@@ -117,17 +99,6 @@ const App = () => {
             setTheme("dark");
         }
     }, []);
-/*
-        const findLevel = (birthYear) => {
-            birthYear = 1989;
-            let date = new Date();
-            //let birthday = new Date(birthYear);
-            let age = date.getFullYear() - birthYear;
-            //birthday.getFullYear();
-            setLevel(age)
-            return level;
-        };
-    */
 
 
 
@@ -135,19 +106,20 @@ const App = () => {
         <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
             <>
                 <GlobalStyles />
-               <div className="App">
+               <div className="App" 
+               >
                 <StyledWindow>
                  <Navbar />
                     <StyledCont
                     >
                         <RouteSwitch 
-                      //  findLevel={findLevel} 
+                      
                         />
                     </StyledCont>
                </StyledWindow>
-           
+              <Outlet />
                 </div>
-                <Outlet />
+             
             </>
         </ThemeProvider>
     );
