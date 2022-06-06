@@ -26,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
       display: flex;
       align-items: center;
       justify-content: center;
-
+line-height: 1.2rem;
  
   }
 
@@ -147,8 +147,9 @@ export const Row = styled.div`
 export const Column = styled.div`
   //  flex: ${(props) => props.size};
 display: flex;
-    border: 3px solid purple;
-    height: 100%;
+flex-direction: column;
+   // border: 3px solid purple;
+   height: 100%;
         padding: 0.5vh;
        align-items: center;
 
@@ -165,20 +166,7 @@ export const StyledPl = styled.div`
     background-color: rgba(180, 153, 180, 0.479);
 `;
 
-export const StyledProject = styled.div`
-    //!unsure about layout. , links arent working
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    //justify-content: space-around;
-    width: 50%;
-        border: 7px inset #dae7e4;
-    background-color: #b5cfca;
-    outline: 5px inset #dae7e4;
-    margin-right: 1vw;
-    padding: 0.5vh;
-  
-`;
+
 
 /* "#f5ebdd", linen
      "#d9d4e7",  ??? 

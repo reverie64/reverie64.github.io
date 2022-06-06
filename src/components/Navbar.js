@@ -12,13 +12,12 @@ import InactiveSection from "../assets/InactiveSection.svg";
 const StyledNav = styled.nav`
     min-height: 8vh;
     display: flex;
-  
-    //justify-content: flex-start;
-    width: 100%; //! == container
+    width: 100%; //! === container width
     font-size: 1.2rem;
          align-items: flex-start;
     //  border: 5px purple solid;
-    /*background-color: #c5c0d8;
+    /* ----backup styles----
+    background-color: #c5c0d8;
         border: 8px solid #405c76;
         border-top-right-radius: 10px;
          border-top-left-radius: 10px;
@@ -28,11 +27,8 @@ const StyledNav = styled.nav`
 const StyledUl = styled.ul` 
     width: 100%;
     display: flex;
-//padding-right: 2vw;
- //   border: 5px blue solid;
-
-    //justify-content: flex-start;
          align-items: center;
+     
 
     .navlink {  //! thinkness changes per each link lenght -- fix 
         display: flex;
@@ -40,15 +36,16 @@ const StyledUl = styled.ul`
         border-image-slice: 20;
         border-radius: 15px;
    //  text-decoration-width: 50px;
+   
     }
 
     li {
         display: flex;
-    //    padding-left: 1.5vh;
-      //  padding-right: 1.5vh;
      min-width: 9vw;
      min-height: 4vh;
      justify-content: center;  // put max for bigger res
+      align-items: center;
+     
     }
 `;
 
@@ -58,15 +55,10 @@ const StyledLogo = styled.div` //! length expands too much with larger screen
     background-image: url(${Logo});
     background-repeat: no-repeat;
     display: flex;
-    // justify-self: flex-start;
-    // align-self: center;
-         // border: 5px purple solid;
 `;
 
 /*              
   color: isActive ? `${(props) => props.theme.//colors.text}` : 'pink',
-
-
 `;
 
 
@@ -88,7 +80,7 @@ const Navbar = () => {
                         textDecoration: isActive
                             ? "underline #cedfdc 6vh"
                             : "none",
-                  //! fix               textDecorationWidth: isActive ? "100%" : "none",
+                  //! fix textDecorationWidth: isActive ? "100%" : "none",
                                   
                         color: isActive ? "#383838" : "#1f1f1f", 
 
