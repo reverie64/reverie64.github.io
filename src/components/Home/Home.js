@@ -119,6 +119,9 @@ currently seeking new guild. </li>
 */
 
 const Home = () => {
+  //! need to use this code on about too.
+  // make small pic into a gif that moves slightly like pokemon sprites
+  
     /*
         const findLevel = (birthYear) => {
             birthYear = 1989;

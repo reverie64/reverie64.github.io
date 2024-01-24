@@ -8,7 +8,10 @@ import { ReactComponent as Mail } from "../assets/Mail.svg";
 
 import { Main, Row, InfoText, SmInfoText } from "../theme";
 
-//! unsure about layout and style, links arent working when importing as react components. change to img for now.
+//! unsure about layout and style
+// horizontal section split into 3 boxes for each. linkedin, then github, then email
+// text underneath or just remove because its kind of pointless
+//! links arent working when importing as react components. change to img for now.
 
 const StyledContactDiv = styled(Main)`
     //    justify-content: space-around;

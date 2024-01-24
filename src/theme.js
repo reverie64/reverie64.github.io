@@ -4,6 +4,10 @@ import BG from "./assets/BG.svg";
 //import Cursor from "/Cursor.svg"
 import testpic from "./assets/testpic.png"
 
+// adjust to keep size ratios on large screen
+// and make mobile version look better as a long rectangle 
+// finalize main font decsion and backup
+
 export const GlobalStyles = createGlobalStyle`
 
 
@@ -77,6 +81,7 @@ background: #c0c0c0;
   }
 
 ::-webkit-scrollbar-button {  //!double buttons showing up after layout changes
+// but dont really want a scroll bar unless screen is just tiny
 height: 30px;
      	background-color: #c0c0c0;
 	border-width: 1px;

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// later achievement unlocked - epic failure haha
+
 const StyledNotFound = styled.div`
     display: flex;
     flex-direction: column;

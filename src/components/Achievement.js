@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 import Section from "../assets/Section.svg";
 
+
+// easter egg achievement - change name of js file to make it less confusing. 
+// explain what the ach means underneath main text
+// how long to have it appear on the screen or have to x out? 
+
 const StyledAchv = styled.div`
     height: 10vh;
     width: 30vw;

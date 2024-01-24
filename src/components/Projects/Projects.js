@@ -16,6 +16,7 @@ import NewButton from "../../assets/NewButton.svg";
 
 
 //! code messsed up. dont know where. 
+// need to import library. js and portfolio. js, remove static text 
 
 const StyledProjectDiv = styled(Main)`
     //  justify-content: space-between;
@@ -114,12 +115,14 @@ const StyledButton = styled.button`
 
 
 // ul level over 9000
+//! move info text of inventory etc outside of square
 
 const Projects = () => {
     return (
         <StyledProjectDiv>
             <TopRow>
                 <InfoText>inventory? items? crafted? inspect?</InfoText>
+                
                 <SmInfoText>Code</SmInfoText>
             </TopRow>
 

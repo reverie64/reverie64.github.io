@@ -9,6 +9,9 @@ import Navbar from "./components/Navbar";
 import RouteSwitch from "./components/RouteSwitch";
 import ContainerBg from "./assets/ContainerBg.svg";
 
+//! havent tackled dark mode yet.
+// check for update of preferred user setting 
+
 
 const StyledWindow = styled.div`  
 //background-color: #c5c0d8;

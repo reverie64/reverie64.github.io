@@ -64,6 +64,8 @@ const StyledLogo = styled.div` //! length expands too much with larger screen
 
 `*/
 //! change highlight on active to different color
+// looks fine the way it is. being too particular
+
 
 const Navbar = () => {
     return (

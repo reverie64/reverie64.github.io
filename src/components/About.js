@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Main, Row, InfoText, SmInfoText } from "../theme";
 import testpic from "../assets/testpic.png";
 
+//! work on readability: add boxes to separate sections, spacing
+
 /* not sure about:
   character bio/profile/ in depth/stats?
   character title:
@@ -42,7 +44,7 @@ background-repeat: no-repeat;
  //   flex-grow: 1;
 `;
 
-
+//! import findLevel to replace static lvl
  <StyledImg>
                     {" "}
                     <img src={testpic} /> <StyledLevel> lvl. 32 </StyledLevel>

@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { StyledProject, StyledPl, InfoText, SmInfoText } from "../../theme";
 
+//! not using
+// insert fun facts underneath link to code to summarize some of the cool things i built in
+// like the hp bars, achievements, svgs? 
+// just in case they look but dont want to read the code. 
+
 const Portfolio = () => {
     return (
 

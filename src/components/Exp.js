@@ -1,3 +1,6 @@
+// second section under about has some of the data already 
+// was unsure about placement so it was omitted for now
+
 //obtained degrees?
 //import styled from "styled-components";
 
@@ -63,7 +66,7 @@ const Exp = () => {
             <section className="ed-content">   <p className="sm-info-text">achievements?</p>
                 undergrad sociology 2014 39 graduate hours with special
                 interest/relevant coursework in diversity and inclusion.
-                responsiblity to continue to quest so web is accessible for all.
+                responsibility to continue to quest so web is accessible for all.
             </section>
          
    

@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { StyledProject, StyledPl, InfoText, SmInfoText } from "../../theme";
 
+//! not using
+// dont like blinking arrow idea anymore
+// better to show all on page, simplify 
+
 const Library = () => {
 
 
